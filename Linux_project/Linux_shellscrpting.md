@@ -1,7 +1,7 @@
 # Bash script for Generating a Multiplication Table
 
 ### user input for number: 
-The script must first ask the user to input a number for which the multiplication table to be generated 
+The script must first ask the user to input a number for which the multiplication table is to be generated 
 
 ### Choice of Table Range: 
 Next, ask the user if they want a full multiplication table (1 to 10) or a partial table. If they choose partial, prompt them for the start and end of the range
@@ -17,9 +17,11 @@ Ensure that the user enters valid numbers for the multiplication table and the s
 
 ## Working: 
 I start the script by prompting the user to enter a number for the multiplication table:
-** read -p "Enter a number to generate its multiplication table: " number **
 
-It then prints the header for the multiplication table.
+**read -p "Enter a number to generate its multiplication table: " number**
+
+I then use **echo "multiplication Table for $number"** to print the header for the multiplication table.
+
 List form of for loop:
 This loop iterates through the values of i from 1 to 10.
 For each i, it calculates the result of the number * i and prints the equation.
