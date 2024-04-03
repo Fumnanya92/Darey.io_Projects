@@ -1,7 +1,7 @@
 # MarketPeak_Ecommerce2
 
 
-##1.	Git Version Control setup##
+## 1.	Git Version Control setup
 Step 1: Opening a project Directory on my terminal
 I opened my mobaxterm terminal and navigated to the directory git-project [cd /home/mobaxterm/Desktop/Darey.io/git-project], I created another folder named MarketPeak_Ecommerce2/
 Using [mkdir MarketPeak_Ecommerce2]. 
