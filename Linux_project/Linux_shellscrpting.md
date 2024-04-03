@@ -27,6 +27,7 @@ I then use **echo "multiplication Table for $number"** to print the header for t
 **List form of for loop:**
 This loop iterates through the values of **i** from 1 to 10.
 For each **i**, it calculates the result of **number * i** and prints the equation.
+![screenhshoot of the above step](image/MultiplicationT.png)
 
 **C-style form of for loop:**
 This loop initializes i to 1, runs the loop until i reaches 10, and increments i by 1 in each iteration.
