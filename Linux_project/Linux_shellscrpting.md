@@ -32,9 +32,18 @@ For each **i**, it calculates the result of **number * i** and prints the equati
 This loop initializes i to 1, runs the loop until i reaches 10, and increments i by 1 in each iteration.
 It calculates the result of **number * i** and prints the equation.
 
+**The generate_full_table function generates the full multiplication table up to 10**
+
 ![screenhshoot of the above step](image/MultiplicationT.png)
 
 ### Writing the following line to generate the function *generate_partial_table()* :
+
+
+The generate_full_table function generates the full multiplication table up to 10, similar to the previous script.
+The generate_partial_table function prompts the user to enter an end limit and generates a multiplication table up to that limit.
+After prompting the user for a number, it asks whether the user wants a full or partial table.
+Based on the user's choice, it calls the corresponding function.
+If the user enters an invalid choice, it displays an error message.
 
 
 
