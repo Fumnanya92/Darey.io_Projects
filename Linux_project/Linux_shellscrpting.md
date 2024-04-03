@@ -32,7 +32,7 @@ For each **i**, it calculates the result of **number * i** and prints the equati
 This loop initializes i to 1, runs the loop until i reaches 10, and increments i by 1 in each iteration.
 It calculates the result of **number * i** and prints the equation.
 
-**The generate_full_table function generates the full multiplication table up to 10**
+**The *generate_full_table()* function generates the full multiplication table up to 10**
 
 ![screenhshoot of the above step](image/MultiplicationT.png)
 
