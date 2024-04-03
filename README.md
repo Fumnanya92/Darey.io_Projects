@@ -1,12 +1,12 @@
 # MarketPeak_Ecommerce2
 
 
-##1.	Git Version Control setup
+##1.	Git Version Control setup##
 Step 1: Opening a project Directory on my terminal
 I opened my mobaxterm terminal and navigated to the directory git-project [cd /home/mobaxterm/Desktop/Darey.io/git-project], I created another folder named MarketPeak_Ecommerce2/
 Using [mkdir MarketPeak_Ecommerce2]. 
 Cd MarketPeak_Ecommerce2
-##Step 2. Prepare an Ecommerce website
+##Step 2. Prepare an Ecommerce website##
 I downloaded a copy of an Ecommerce website template from tooplate.com. Then extracted the folder into MarketPeak_Ecommerce2 directory 
 Step 3. Stage and commit the website templete to Git. 
 I logged into my Github account, I created a remote repository with title MarketPeak_Ecommerce2, without initializing a README.md, gitognor or licences
