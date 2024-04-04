@@ -4,7 +4,7 @@
 The script must first ask the user to input a number for which the multiplication table is to be generated 
 
 ### Choice of Table Range: 
-Next, ask the user if they want a full multiplication table (1 to 10) or a partial table. If they choose partial, prompt them for the start and end of the range
+ask the user if they want a full multiplication table (1 to 10) or a partial table. If they choose partial, prompt them for the start and end of the range
 
 ### Use of Loops:
 Implement the logic to generate the multiplication table using loops. You may use either the list form or C-style for loop based on what's appropriate
@@ -38,8 +38,10 @@ It calculates the result of **number * i** and prints the equation.
 
 ### Writing the following line to generate the function *generate_partial_table()* :
 
+first **read -p "Enter the starting number for the partial table (1 to 10):" start** to collect the number for the starting range
+then, I ask the user to enter the end limit for the range
+**read -p "Enter the end limit for the partial table (1 to 10): " limit**
 
-The generate_full_table function generates the full multiplication table up to 10, similar to the previous script.
 The generate_partial_table function prompts the user to enter an end limit and generates a multiplication table up to that limit.
 After prompting the user for a number, it asks whether the user wants a full or partial table.
 Based on the user's choice, it calls the corresponding function.
