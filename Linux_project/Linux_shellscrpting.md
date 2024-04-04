@@ -55,7 +55,17 @@ For each value of **i**, the multiplication result is calculated **(result=$((nu
  ![screenshot of the above step](image/Functions.png)
 
 ### Finally
-I write a script to prompt the user to choose full or partial multiplication table 
+I write a script to prompt the user to choose a full or partial multiplication table 
+
+**read -p "Do you want a full table or a partial table? (Enter 'f' for full, 'p' for partial): " choice**
+*choice*: This is the variable where the user's input will be stored.
+Then I proceed to check the value for *choice*.
+**if [ "$choice" == "f" ]; then:** This line checks if the value of choice is equal to **"f"**(full). If it is, then it executes the following block of code, which calls the generate_full_table() function.
+**elif [ "$choice" == "p" ]; then:** This line stands for "else if." It checks if the value of choice is equal to "p". If it is, then it executes the following block of code, which calls the generate_partial_table function.
+else: This line is executed if neither of the previous conditions ("f" or "p") is true, In this case, it displays an error message:
+**echo "Invalid choice. Please enter 'f' for full table or 'p' for partial table."**
+
+
 
 The generate_partial_table function prompts the user to enter an end limit and generates a multiplication table up to that limit.
 After prompting the user for a number, it asks whether the user wants a full or partial table.
