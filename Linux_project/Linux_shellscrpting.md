@@ -80,7 +80,7 @@ Based on the user's choice, it calls the corresponding function.
 If the user enters an invalid choice, it displays an error message.
 
 ## Execute
-![screenshot of the above step](image/Test 2.png)
+![screenshot of the above step](image/Test2.png)
 
 
 
