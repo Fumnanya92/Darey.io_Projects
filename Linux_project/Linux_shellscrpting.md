@@ -64,7 +64,7 @@ Then I proceed to check the value for *choice*.
 **elif [ "$choice" == "p" ]; then:** This line stands for "else if." It checks if the value of choice is equal to "p". If it is, then it executes the following block of code, which calls the generate_partial_table function.
 else: This line is executed if neither of the previous conditions ("f" or "p") is true, In this case, it displays an error message:
 **echo "Invalid choice. Please enter 'f' for full table or 'p' for partial table."**
-![screenshot of the above step](image)
+![screenshot of the above step](image/choice.png)
 
 
 
