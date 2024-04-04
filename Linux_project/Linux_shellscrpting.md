@@ -1,6 +1,6 @@
 # Bash script for Generating a Multiplication Table
 
-### user input for number: 
+### User input for number: 
 The script must first ask the user to input a number for which the multiplication table is to be generated 
 
 ### Choice of Table Range: 
