@@ -1,4 +1,4 @@
-dplea# Bash script for Generating a Multiplication Table
+# Bash script for Generating a Multiplication Table
 
 ### User input for number: 
 The script must first ask the user to input a number for which the multiplication table is to be generated 
@@ -48,28 +48,34 @@ then, I ask the user to enter the end limit for the range
 using the for loop to iterate through the numbers from **start** to **limit**
 **list form**
 I used the *seq* to generate a sequence of numbers from the value of **start** to **limit**
+
 The loop iterates over each number in the generated sequence, where i takes each value from **start** to **limit** in increments of 1
+
 For each value of **i**, the multiplication result is calculated **(result=$((number * i)))** and then printed **(echo "$number * $i = $result")**.
+
 **c-style**
  On the C-style for loop, iterating through the numbers from **start** to **limit**, calculating the multiplication results, and displaying them.
+ 
  ![screenshot of the above step](image/Functions.png)
 
 ### Finally
 I write a script to prompt the user to choose a full or partial multiplication table 
 
 **read -p "Do you want a full table or a partial table? (Enter 'f' for full, 'p' for partial): " choice**
+
 *choice*: This is the variable where the user's input will be stored.
 Then I proceed to check the value for *choice*.
+
 **if [ "$choice" == "f" ]; then:** This line checks if the value of choice is equal to **"f"**(full). If it is, then it executes the following block of code, which calls the generate_full_table() function.
+
 **elif [ "$choice" == "p" ]; then:** This line stands for "else if." It checks if the value of choice is equal to "p". If it is, then it executes the following block of code, which calls the generate_partial_table function.
+
 else: This line is executed if neither of the previous conditions ("f" or "p") is true, In this case, it displays an error message:
 **echo "Invalid choice. Please enter 'f' for full table or 'p' for partial table."**
+
 ![screenshot of the above step](image/choice.png)
 
 
-
-The generate_partial_table function prompts the user to enter an end limit and generates a multiplication table up to that limit.
-After prompting the user for a number, it asks whether the user wants a full or partial table.
 Based on the user's choice, it calls the corresponding function.
 If the user enters an invalid choice, it displays an error message.
 
