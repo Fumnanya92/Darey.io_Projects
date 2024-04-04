@@ -48,6 +48,14 @@ then, I ask the user to enter the end limit for the range
 using the for loop to iterate through the numbers from **start** to **limit**
 **list form**
 I used the *seq* to generate a sequence of numbers from the value of **start** to **limit**
+The loop iterates over each number in the generated sequence, where i takes each value from **start** to **limit** in increments of 1
+For each value of **i**, the multiplication result is calculated **(result=$((number * i)))** and then printed **(echo "$number * $i = $result")**.
+**c-style**
+ On the C-style for loop, iterating through the numbers from **start** to **limit**, calculating the multiplication results, and displaying them.
+ ![screenshot of the above step]()
+
+### Finally
+I write a script to prompt the user to choose full or partial multiplication table 
 
 The generate_partial_table function prompts the user to enter an end limit and generates a multiplication table up to that limit.
 After prompting the user for a number, it asks whether the user wants a full or partial table.
