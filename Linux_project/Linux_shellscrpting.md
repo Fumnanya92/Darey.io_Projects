@@ -1,4 +1,4 @@
-# Bash script for Generating a Multiplication Table
+dplea# Bash script for Generating a Multiplication Table
 
 ### User input for number: 
 The script must first ask the user to input a number for which the multiplication table is to be generated 
@@ -39,8 +39,15 @@ It calculates the result of **number * i** and prints the equation.
 ### Writing the following line to generate the function *generate_partial_table()* :
 
 first **read -p "Enter the starting number for the partial table (1 to 10):" start** to collect the number for the starting range
+
 then, I ask the user to enter the end limit for the range
 **read -p "Enter the end limit for the partial table (1 to 10): " limit**
+
+**echo "Partial Multiplication table for $number up to $limit:"** to display a header indicating the number for which the table is generated and the provided limit.
+
+using the for loop to iterate through the numbers from **start** to **limit**
+**list form**
+I used the *seq* to generate a sequence of numbers from the value of **start** to **limit**
 
 The generate_partial_table function prompts the user to enter an end limit and generates a multiplication table up to that limit.
 After prompting the user for a number, it asks whether the user wants a full or partial table.
