@@ -88,7 +88,7 @@ If the user enters an invalid choice, it displays an error message.
 
 and the bottom of the program write *Ask user if they want to run the program again*
 
-`read -p "Press Enter to run the program again, or 'x' to exit: " restart_input
+`read -p "Press Enter to run the program again, or 'x' to exit: " restart_input`
 
 #Exit the loop if the user inputs 'x'
 
