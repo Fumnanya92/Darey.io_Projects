@@ -85,7 +85,8 @@ If the user enters an invalid choice, it displays an error message.
 ### Asking users if they want to run the program again
 **Using While true** to restart the program 
 ![screenshot of while true](image/while.png)
-Ask user if they want to run the program again
+
+and the bottom of the program write *Ask user if they want to run the program again*
 
 read -p "Press Enter to run the program again, or 'x' to exit: " restart_input
 
@@ -98,5 +99,6 @@ read -p "Press Enter to run the program again, or 'x' to exit: " restart_input
     # Clear the terminal screen before restarting the loop
     clear
 done
+
 
 
