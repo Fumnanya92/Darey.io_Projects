@@ -18,9 +18,9 @@ Ensure that the user enters valid numbers for the multiplication table and the s
 ## Working: 
 I start the script by prompting the user to enter a number for the multiplication table:
 
-**read -p "Enter a number to generate its multiplication table: " number**
+`read -p "Enter a number to generate its multiplication table: " number`
 
-I then use **echo "multiplication Table for $number"** to print the header for the multiplication table.
+I then use `echo "multiplication Table for $number"`to print the header for the multiplication table.
 
 ### Writing the following line to generate the function *generate_full_table()* :
 
@@ -38,12 +38,12 @@ It calculates the result of **number * i** and prints the equation.
 
 ### Writing the following line to generate the function *generate_partial_table()* :
 
-first **read -p "Enter the starting number for the partial table (1 to 10):" start** to collect the number for the starting range
+first `read -p "Enter the starting number for the partial table (1 to 10):" start` to collect the number for the starting range
 
 then, I ask the user to enter the end limit for the range
-**read -p "Enter the end limit for the partial table (1 to 10): " limit**
+`read -p "Enter the end limit for the partial table (1 to 10): " limit`
 
-**echo "Partial Multiplication table for $number up to $limit:"** to display a header indicating the number for which the table is generated and the provided limit.
+`echo "Partial Multiplication table for $number up to $limit:"` to display a header indicating the number for which the table is generated and the provided limit.
 
 using the for loop to iterate through the numbers from **start** to **limit**
 **list form**
@@ -61,7 +61,7 @@ For each value of **i**, the multiplication result is calculated **(result=$((nu
 ### Finally
 I write a script to prompt the user to choose a full or partial multiplication table 
 
-**read -p "Do you want a full table or a partial table? (Enter 'f' for full, 'p' for partial): " choice**
+`read -p "Do you want a full table or a partial table? (Enter 'f' for full, 'p' for partial): " choice`
 
 *choice*: This is the variable where the user's input will be stored.
 Then I proceed to check the value for *choice*.
