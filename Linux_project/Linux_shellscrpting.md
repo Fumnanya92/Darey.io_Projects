@@ -51,7 +51,7 @@ I used the *seq* to generate a sequence of numbers from the value of **start** t
 
 The loop iterates over each number in the generated sequence, where i takes each value from **start** to **limit** in increments of 1
 
-For each value of **i**, the multiplication result is calculated **(result=$((number * i)))** and then printed **(echo "$number * $i = $result")**.
+For each value of **i**, the multiplication result is calculated `(result=$((number * i)))` and then printed `(echo "$number * $i = $result")`.
 
 **c-style**
  On the C-style for loop, iterating through the numbers from **start** to **limit**, calculating the multiplication results, and displaying them.
@@ -71,7 +71,7 @@ Then I proceed to check the value for *choice*.
 **elif [ "$choice" == "p" ]; then:** This line stands for "else if." It checks if the value of choice is equal to "p". If it is, then it executes the following block of code, which calls the generate_partial_table function.
 
 else: This line is executed if neither of the previous conditions ("f" or "p") is true, In this case, it displays an error message:
-**echo "Invalid choice. Please enter 'f' for full table or 'p' for partial table."**
+`echo "Invalid choice. Please enter 'f' for full table or 'p' for partial table."`
 
 ![screenshot of the above step](image/choice.png)
 
@@ -92,7 +92,7 @@ and the bottom of the program write *Ask user if they want to run the program ag
 
 #Exit the loop if the user inputs 'x'
 
-if [ "$restart_input" == "x" ]; then
+`if [ "$restart_input" == "x" ]; then
 
     echo "Exiting program..."
     
@@ -104,7 +104,7 @@ fi
 
 clear
 
-done
+done`
 
 
 
