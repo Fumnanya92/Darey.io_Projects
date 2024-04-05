@@ -92,19 +92,17 @@ and the bottom of the program write *Ask user if they want to run the program ag
 
 #Exit the loop if the user inputs 'x'
 
-`if [ "$restart_input" == "x" ]; then
+if [ "$restart_input" == "x" ]; then
 
     echo "Exiting program..."
-    
+   
     break
-    
-fi
+    fi
 
 #Clear the terminal screen before restarting the loop
-
 clear
 
-done`
+done
 
 
 
