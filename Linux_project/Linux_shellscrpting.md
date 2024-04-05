@@ -82,6 +82,18 @@ If the user enters an invalid choice, it displays an error message.
 ## Execute
 ![screenshot of the above step](image/Test2.png)
 
+### Asking users if they want to run the program again
+**Using While true** to restart the program 
+    read -p "Press Enter to run the program again, or 'x' to exit: " restart_input
 
+    # Exit the loop if user inputs 'x'
+    if [ "$restart_input" == "x" ]; then
+        echo "Exiting program..."
+        break
+    fi
+
+    # Clear the terminal screen before restarting the loop
+    clear
+done
 
 
