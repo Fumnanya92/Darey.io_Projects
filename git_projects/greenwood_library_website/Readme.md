@@ -13,9 +13,19 @@ Click on the "+" icon in the top-right corner and select "New repository".
 Name the repository "greenwood-library-website".
 Optionally, add a description.
 Check the box for "Initialize this repository with a README".
-Click "Create repository".```
+Click "Create repository".
+```
 
 Tasks
+Step 2
+with any terminal or git bash
+
+Create a folder in your local machine(it can be any name): `mkdir vsc`
+**cd** into the folder `cd vsc`
+
+Create the following files using `touch`. e.g. `touch home.html`
+**Home.html, about_us.html, contact.html, events.html**
+
 
 1. In the main branch, using Visual Studio Code editor ensure there are files for each of the web pages.
 
