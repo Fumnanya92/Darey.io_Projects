@@ -47,3 +47,7 @@ contact.html**
 `the changes directly to the main branch. (This is a simulation of the team's existing code base for the website)
 
 ### Morgan's work
+Create a new branch and name it *add_book_reviews* 
+git checkout -b add-book-reviews
+![screenshot of creating new branch](image/creating_branch.png)
+
