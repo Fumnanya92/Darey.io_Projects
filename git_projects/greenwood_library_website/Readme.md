@@ -33,7 +33,7 @@ events.html
 
 Step 3
 Open Visual Studio Code (VS Code) and open the *vsc* and clone your git repository in there.
-git clone https://github.com/fumnanya92/
+git clone https://github.com/Fumnanya92/Darey.io_Projects
 
 ![screenshot of cloneing repository](image/cloning.png)
 
@@ -43,4 +43,7 @@ git clone https://github.com/fumnanya92/
 about us.html,
 events.html,
 contact.html**
-4. Stage, commit, and push the changes directly to the main branch. (This is a simulation of the team's existing code base for the website)
+2. Stage, commit with `git add .` `git commit -m "Add initial web pages" `, and push `git push origin main
+`the changes directly to the main branch. (This is a simulation of the team's existing code base for the website)
+
+### Morgan's work
