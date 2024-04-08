@@ -33,18 +33,14 @@ events.html
 
 Step 3
 Open Visual Studio Code (VS Code) and open the *vsc* and clone your git repository in there.
+git clone https://github.com/fumnanya92/
+
 ![screenshot of cloneing repository](image/cloning.png)
 
 1. In the main branch, using Visual Studio Code editor ensure there are files for each of the web pages.
 
-```home.html
-
-about us.html
-
-events.html
-
-contact us.html
-```
-
-2. Add any random content into each of the files
-3. Stage, commit and push the changes directly to the main branch. (This is a simulation of the team's existing code base for the website)
+**home.html,
+about us.html,
+events.html,
+contact.html**
+4. Stage, commit, and push the changes directly to the main branch. (This is a simulation of the team's existing code base for the website)
