@@ -24,10 +24,12 @@ Create a folder in your local machine(it can be any name): `mkdir vsc`
 **cd** into the folder `cd vsc`
 
 Create the following files using `touch`. e.g. `touch home.html`
-**Home.html 
+```
+Home.html
 about_us.html
 contact.html 
-events.html**
+events.html
+```
 
 Step 3
 Open Visual Studio Code (VS Code) and open the *vsc* and clone your git repository in there.
