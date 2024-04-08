@@ -31,7 +31,7 @@ contact.html
 events.html
 ```
 
-Step 3
+### Step 3
 Open Visual Studio Code (VS Code) and open the *vsc* and clone your git repository in there.
 git clone https://github.com/Fumnanya92/Darey.io_Projects
 
