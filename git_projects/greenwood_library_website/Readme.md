@@ -51,7 +51,8 @@ Create a new branch and name it *add_book_reviews*
 git checkout -b add-book-reviews
 ![screenshot of creating new branch](image/Creating_branch.png)
 
-Create the book_reviews.html file with some content:
+**Create the book_reviews.html file with some content:**
+
 Stage, commit, and push the changes:
 ```
 git add .
