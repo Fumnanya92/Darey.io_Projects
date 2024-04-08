@@ -8,12 +8,12 @@ You will simulate the roles of two contributors: "Morgan" and "Jamie". Morgan wi
 
 1. Create a Repository on GitHub:
 
-> Go to GitHub and log into your account.
+``` Go to GitHub and log into your account.
 Click on the "+" icon in the top-right corner and select "New repository".
 Name the repository "greenwood-library-website".
 Optionally, add a description.
 Check the box for "Initialize this repository with a README".
-Click "Create repository".
+Click "Create repository".```
 
 Tasks
 
