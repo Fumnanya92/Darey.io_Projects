@@ -70,4 +70,18 @@ Click "Create pull request".
 On the Pull Request page, click "Merge pull request".
 Confirm the merge.
 ```
-Step 6: Jamie's Work: Updating Events Page
+### Jamie's Work: Updating Events Page
+Switch back to the main branch:
+`git checkout main`
+
+Create a new branch for Jamie's work `update event`
+Open events.html and make some updates (add or edit anything)
+Stage, commit, and push the changes:
+```
+git add events.html
+git commit -m "Update events page"
+git push origin update-events
+```
+Create a Pull Request for Jamie's work on GitHub following the same steps as for Morgan's work.
+
+Merge the Pull Request into the main branch on GitHub.
