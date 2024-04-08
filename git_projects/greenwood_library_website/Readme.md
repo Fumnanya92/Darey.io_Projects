@@ -49,5 +49,24 @@ contact.html**
 ### Morgan's work
 Create a new branch and name it *add_book_reviews* 
 git checkout -b add-book-reviews
-![screenshot of creating new branch](image/creating_branch.png)
+![screenshot of creating new branch](image/Creating_branch.png)
 
+Create the book_reviews.html file with some content:
+Stage, commit, and push the changes:
+```
+git add .
+git commit -m "Add book reviews section"
+git push origin add-book-reviews
+```
+Go to the GitHub repository page and create a Pull Request for Morgan's work:
+```
+Click on "Compare & pull request".
+Review the changes and write a description.
+Click "Create pull request".
+```
+**Merge the Pull Request into the main branch:**
+```
+On the Pull Request page, click "Merge pull request".
+Confirm the merge.
+```
+Step 6: Jamie's Work: Updating Events Page
