@@ -58,6 +58,7 @@ In this mini project, you will work with Amazon S3 bucket policies to control ac
    Click the "Upload" button.
    Select a test file from your local computer and upload it to the bucket.
    ```
+   ![screenshot of the folder button](image/)
 
    - **Using AWS CLI:**
      - Open your terminal or command prompt.
