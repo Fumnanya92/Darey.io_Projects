@@ -32,19 +32,20 @@ In this mini project, you will work with Amazon S3 bucket policies to control ac
    ```
 
    **Configure Options (Optional):**
-   Set up options such as versioning, logging, and tags as needed.
+   `Set up options such as versioning, logging, and tags as needed.`
    
    **Set Permissions:**
-   Define who can access the bucket and the objects inside it.
+  ` Define who can access the bucket and the objects inside it.`
    
    **Review:**
-   Double-check all the configurations you've made.
+   `Double-check all the configurations you've made.`
    
    **Create Bucket:**
-   Click the "Create bucket" button to finalize the process.
+   `Click the "Create bucket" button to finalize the process.`
    ![screenshot of creating bucket button](image/Creating_bucket.png)
 
 7. **Confirmation:**
    Once the bucket is created, you'll see a confirmation message.
    You can now start uploading files to your new S3 bucket!
+   ![screenshot of bucket created](image/bucket_created.png)
 
