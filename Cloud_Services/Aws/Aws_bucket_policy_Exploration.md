@@ -26,9 +26,11 @@ In this mini project, you will work with Amazon S3 bucket policies to control ac
 4. **Follow the prompts to configure the new S3 bucket:**
    
    **Bucket Name and Region:**
+   ```
    Enter a unique bucket name.
    Select the region for your bucket.
-   
+   ```
+
    **Configure Options (Optional):**
    Set up options such as versioning, logging, and tags as needed.
    
@@ -40,6 +42,7 @@ In this mini project, you will work with Amazon S3 bucket policies to control ac
    
    **Create Bucket:**
    Click the "Create bucket" button to finalize the process.
+   ![screenshot of creating bucket button](image/Creating_bucket.png)
 
 7. **Confirmation:**
    Once the bucket is created, you'll see a confirmation message.
