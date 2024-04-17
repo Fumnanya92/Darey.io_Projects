@@ -5,16 +5,16 @@
 In this mini project, you will work with Amazon S3 bucket policies to control access to your S3 buckets. The project will guide you through creating a simple S3 bucket, defining a policy to manage access permissions, and testing the policy by uploading and retrieving objects.
 
 1. ** Log in to the AWS Management Console.**
-```
+   ```
    Open your web browser and go to (https://aws.amazon.com/console/).
    Enter your username and password.
    Click "Sign In".
-```
+   ```
 2. **Navigate to the S3 service:**
-```
+   ```
    Once logged in, at the top of the AWS Management Console, you'll see a search bar. 
    Type in "S3" and select "Amazon S3" from the search results.
-```
+   ```
 
 4. **Click the "Create bucket" button:**
    ```
