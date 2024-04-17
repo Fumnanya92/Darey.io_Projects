@@ -6,9 +6,9 @@ In this mini project, you will work with Amazon S3 bucket policies to control ac
 
 1. ** Log in to the AWS Management Console.**
 ```
-Open your web browser and go to (https://aws.amazon.com/console/).
-Enter your username and password.
-Click "Sign In".
+   Open your web browser and go to (https://aws.amazon.com/console/).
+   Enter your username and password.
+   Click "Sign In".
 ```
 2. **Navigate to the S3 service:**
 ```
