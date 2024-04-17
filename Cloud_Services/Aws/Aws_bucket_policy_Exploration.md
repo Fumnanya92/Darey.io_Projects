@@ -16,13 +16,15 @@ In this mini project, you will work with Amazon S3 bucket policies to control ac
    Type in "S3" and select "Amazon S3" from the search results.
    ```
 
-4. **Click the "Create bucket" button:**
+3. **Click the "Create bucket" button:**
    ```
    In the Amazon S3 dashboard, click the "Create bucket" button.
    This will open a new window where you can configure your bucket.
    ```
+   ![screenshot of the create bucket button](image/Create_bucket.png)
 
-6. **Follow the prompts to configure the new S3 bucket:**
+4. **Follow the prompts to configure the new S3 bucket:**
+   
    **Bucket Name and Region:**
    Enter a unique bucket name.
    Select the region for your bucket.
