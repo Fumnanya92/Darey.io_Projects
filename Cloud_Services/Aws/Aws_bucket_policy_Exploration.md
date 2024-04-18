@@ -113,8 +113,5 @@ In this mini project, you will work with Amazon S3 bucket policies to control ac
    - After testing with various scenarios, you have observed the access control configurations of your S3 bucket.
    - This helps ensure that your S3 bucket is configured securely according to your access requirements.
 
-5. **Additional Steps (Optional):**
-   - You can further refine your bucket policies, IAM policies, or bucket ACLs based on your testing results.
-   - Regularly monitor access logs and CloudTrail logs to detect any unauthorized access attempts.
 
 
