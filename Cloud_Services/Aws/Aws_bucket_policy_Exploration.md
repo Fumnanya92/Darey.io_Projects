@@ -81,7 +81,7 @@ In this mini project, you will work with Amazon S3 bucket policies to control ac
    ```
 
 8. **Apply the policy to your S3 bucket**
-
+   ![screenshot of Json bucket policy](image/json_policy)
 2. **Retrieve the object from various scenarios:**
    - **Use an allowed IP address:**
      - Access the object from a network with an IP address that you have allowed in the bucket policy or IAM policy.
