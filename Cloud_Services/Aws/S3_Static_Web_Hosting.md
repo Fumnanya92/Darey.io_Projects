@@ -1,4 +1,4 @@
-
+# S3 Static Web Hosting
 
 1. **Log in to the AWS Management Console.**
    ```
