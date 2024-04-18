@@ -82,36 +82,23 @@ In this mini project, you will work with Amazon S3 bucket policies to control ac
 
 8. **Apply the policy to your S3 bucket**
    ![screenshot of Json bucket policy](image/json_policy.png)
-2. **Retrieve the object from various scenarios:**
+9. **Retrieve the object from various scenarios:**
    - **Use an allowed IP address:**
      - Access the object from a network with an IP address that you have allowed in the bucket policy or IAM policy.
-     - You should be able to successfully retrieve the object.
+       in my case 102.88.70.98
+     - You should be able to retrieve the object successfully.
 
    - **Use a restricted IP address:**
      - Access the object from a network with an IP address that is restricted in the bucket policy or IAM policy.
-     - You should receive an access denied error or similar message indicating the restriction.
+     - You should receive an access denied error or a similar message indicating the restriction.
 
    - **Use different IAM users:**
-     - Create multiple IAM users with different permissions.
      - Attempt to access the object using each IAM user's credentials.
      - Verify the access based on the permissions assigned to each IAM user.
-
-3. **Observing Access Control:**
-   - **Allowed IP Address:**
-     - If the IP address is allowed, you should be able to successfully retrieve the object.
-     - Check the AWS CloudTrail logs or S3 server access logs for verification.
-
-   - **Restricted IP Address:**
-     - If the IP address is restricted, you should receive an access denied error.
-     - Check the AWS CloudTrail logs or S3 server access logs for details on the denied request.
-
-   - **IAM Users:**
-     - Verify that IAM users with appropriate permissions can retrieve the object.
-     - IAM users without the necessary permissions should receive an access denied error.
-
+     - 
 4. **Testing Complete:**
-   - After testing with various scenarios, you have observed the access control configurations of your S3 bucket.
-   - This helps ensure that your S3 bucket is configured securely according to your access requirements.
+   - After testing with various scenarios, I have observed the access control configurations of my S3 bucket.
+   - This helps ensure that my S3 bucket is configured securely according to my access requirements.
 
 
 
