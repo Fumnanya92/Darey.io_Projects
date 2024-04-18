@@ -58,16 +58,29 @@ In this mini project, you will work with Amazon S3 bucket policies to control ac
    Click the "Upload" button.
    Select a test file from your local computer and upload it to the bucket.
    ```
-   ![screenshot of the folder button](image/)
+   ![screenshot of the folder button](image/Create_folder.png)
 
-   - **Using AWS CLI:**
-     - Open your terminal or command prompt.
-     - Use the AWS CLI command to upload a test file:
-       ```bash
-       aws s3 cp /path/to/testfile s3://your-bucket-name/
-       ```
-     - Replace `/path/to/testfile` with the path to your local test file.
-     - Replace `s3://your-bucket-name/` with the S3 URI of your bucket.
+7. **Create a new JSON-formatted bucket policy in the AWS Management Console**
+   ```
+   {
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::dareyioproject/*",
+            "Condition": {
+                "IpAddress": {
+                    "aws:SourceIp": "102.88.70.98"
+                }
+            }
+        }
+    ]
+   }
+   ```
+
+8. **Apply the policy to your S3 bucket**
 
 2. **Retrieve the object from various scenarios:**
    - **Use an allowed IP address:**
