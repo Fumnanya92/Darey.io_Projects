@@ -8,7 +8,7 @@
    ```
 2. **Navigate to the S3 service:**
    ```
-   Once logged in, at the top of the AWS Management Console, you'll see a search bar. 
+   Once logged in,on the search tab at the top of the AWS Management Console,
    Type in "S3" and select "Amazon S3" from the search results.
    ```
 
