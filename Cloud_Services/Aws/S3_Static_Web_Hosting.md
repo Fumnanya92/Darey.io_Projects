@@ -43,7 +43,7 @@
 5. **Confirmation:**
    Once the bucket is created, you'll see a confirmation message.
    You can now start uploading files to your new S3 bucket!
-   ![screenshot of bucket created](image/bucket_created.png)
+   ![screenshot of bucket created](image/staticweb_bucket.png)
    
 6. ## Task 2: Upload Static Website Content
 
