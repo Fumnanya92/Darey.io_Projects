@@ -44,3 +44,55 @@
    Once the bucket is created, you'll see a confirmation message.
    You can now start uploading files to your new S3 bucket!
    ![screenshot of bucket created](image/bucket_created.png)
+   
+6. ## Task 2: Upload Static Website Content
+
+1. **Gather HTML, CSS, and other static content files for your website.**
+    - Ensure you have all the necessary files for your static website, including HTML pages, CSS stylesheets, JavaScript files, images, etc.
+    - Organize these files into a directory on your local machine for easier upload.
+
+2. **Upload these files to your S3 bucket.**
+    - Open the AWS Management Console and navigate to the S3 service.
+    - Locate and click on the S3 bucket you created for your website.
+    - Inside the bucket, you'll see an interface where you can manage your objects (files).
+    - Click on the "Upload" button to start the upload process.
+    - In the upload interface:
+        - Click on the "Add files" or "Add folder" button to select the HTML, CSS, and other static content files from your local machine.
+        - You can also drag and drop files directly into the upload interface.
+        - Once all files are selected, click on the "Upload" button to begin the upload process.
+    - Depending on the size of your files and your internet connection speed, the upload process may take some time.
+    - After the upload is complete, you'll see your files listed in the S3 bucket interface.
+
+7. ## Task 3: Configure S3 for Static Website Hosting
+
+1. **In the S3 bucket properties, navigate to the "Static website hosting" section.**
+    - Open the AWS Management Console and navigate to the S3 service.
+    - Click on the S3 bucket you created for hosting your static website.
+    - In the bucket properties, you'll find various configuration options.
+
+2. **Choose "Use this bucket to host a website" and configure the index document.**
+    - Scroll down to find the "Static website hosting" section.
+    - Click on the "Edit" button or directly on the "Static website hosting" tab.
+    - Select the option "Use this bucket to host a website".
+    - Specify the index document. This is the file that will be served as the entry point when someone accesses your website. Common index documents include `index.html` or `home.html`.
+    - Optionally, you can also specify an error document. This is the page that will be displayed if a requested file is not found or if there is another error.
+    - After configuring the index document, click on the "Save changes" button to apply the settings.
+
+## Task 4: Access the Static Website
+
+1. **Obtain the provided endpoint URL from the S3 bucket properties.**
+    - Open the AWS Management Console and navigate to the S3 service.
+    - Click on the S3 bucket that you configured for hosting your static website.
+    - In the bucket properties, locate the "Static website hosting" section.
+    - You'll find an endpoint URL provided under the "Endpoint" or "Website endpoint" section. Copy this URL.
+
+2. **Access the static website using the provided endpoint and verify that it displays correctly.**
+    - Open a web browser.
+    - Paste the copied endpoint URL into the address bar and press Enter.
+    - The browser should now load your static website.
+    - Verify that the website displays correctly, including all HTML, CSS, and other content that you uploaded to the S3 bucket.
+    - Navigate through the website to ensure all links and functionalities work as expected.
+    - If the website doesn't display correctly or if you encounter any issues, double-check your S3 bucket configuration and the uploaded files.
+
+
+
