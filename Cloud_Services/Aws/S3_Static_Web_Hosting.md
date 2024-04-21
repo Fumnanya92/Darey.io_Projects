@@ -8,7 +8,7 @@
    ```
 2. **Navigate to the S3 service:**
    ```
-   Once logged in,on the search tab at the top of the AWS Management Console,
+   Once logged in, on the search tab at the top of the AWS Management Console,
    Type in "S3" and select "Amazon S3" from the search results.
    ```
 
@@ -26,15 +26,8 @@
    Enter a unique bucket name.
    Select the region for your bucket.
    ```
-
-   **Configure Options (Optional):**
-   `Set up options such as versioning, logging, and tags as needed.`
-   
-   **Set Permissions:**
-  ` Define who can access the bucket and the objects inside it.`
    
    **Review:**
-   `Double-check all the configurations you've made.`
    
    **Create Bucket:**
    `Click the "Create bucket" button to finalize the process.`
