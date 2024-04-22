@@ -77,13 +77,13 @@
   - **IAM Role:** Create a new IAM role or select an existing IAM role that grants permission for replication. This role should have permissions to read from the source bucket and write to the destination bucket. *note:* *I chose to create a new role for this project*
 
 - save replication rule.
-![screenshot of save](image/s3virsioningsave.png)
+![screenshot of save](image/s3versioningsave.png)
 
 
 
 ## Step 5: Verify replication configuration
 - You can monitor the replication status and progress in the S3 Management Console.
-![screenshot of save](image/s3virsioningconfirm.png)
+![screenshot of save](image/s3versioningconfirm.png)
 
 # Task 4: Test Versioning
 
