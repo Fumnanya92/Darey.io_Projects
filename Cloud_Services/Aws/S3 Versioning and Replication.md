@@ -41,7 +41,7 @@
    You can now start uploading files to your new S3 bucket!
    ![screenshot of bucket created](image/s3versioning1.png)
 
-# Task 2: Enable Versioning
+## Task 2: Enable Versioning
 
 ## Step 1: Navigate to the "Versioning" section in S3 bucket properties
 - Find and click on "s3versioning1".
@@ -58,7 +58,7 @@
   ![screenshot of versioning enabled](image/s3versioningenabled.png)
 
 
-# Task 3: Configure Cross-Region Replication
+## Task 3: Configure Cross-Region Replication
 
 ## Step 1: Navigate to the "Management" tab in S3 bucket properties
 - Log in to the AWS Management Console and navigate to the S3 service.
