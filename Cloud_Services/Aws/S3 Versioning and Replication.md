@@ -84,7 +84,7 @@
 - You can monitor the replication status and progress in the S3 Management Console.
 ![screenshot of save](image/s3versioningconfirm.png)
 
-# Task 4: Test Versioning
+## Task 4: Test Versioning
 
 ## Step 1: Upload an object to the S3 bucket
 - Select the S3 bucket "s3versioning" where versioning is enabled.
