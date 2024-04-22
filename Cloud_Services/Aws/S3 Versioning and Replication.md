@@ -61,7 +61,6 @@
 ## Task 3: Configure Cross-Region Replication
 
 ## Step 1: Navigate to the "Management" tab in S3 bucket properties
-- Log in to the AWS Management Console and navigate to the S3 service.
 - Find and click on the name of the S3 bucket you want to configure cross-region replication for.
 - Inside the bucket, locate and click on the "Management" tab. This tab contains various management settings for the bucket.
 
@@ -88,57 +87,24 @@
 # Task 4: Test Versioning
 
 ## Step 1: Upload an object to the S3 bucket
-- Log in to the AWS Management Console and navigate to the S3 service.
 - Select the S3 bucket "s3versioning" where versioning is enabled.
 - Click on the "Upload" button to upload an object (file) to the bucket.
 - Follow the prompts to select the file from your local system and upload it to the bucket.
-
+  ![screenshot of save](image/s3versioningreplication.png)
+  
 ## Step 2: Modify the object and observe versioning behavior
-- After the initial upload, modify the uploaded object. You can make changes directly to the file's content.
+- After the initial upload, modify the uploaded object. I uploaded an image with the same name "cloning"
 - Save the modifications and ensure that the changes are reflected in the object.
 
+
 ## Step 3: Check the version history of the object
-- Navigate back to the S3 Management Console and select the "s3versioning" bucket.
+- Navigate back to the S3 Management Console and select the "s3versioning1" bucket.
 - Locate the object that you uploaded and modified.
 - Click on the object's name to view its details.
 - In the object details view, find the section related to versioning or version history.
 - Here, you should see a list of versions of the object, including the initial upload and any subsequent modifications.
 - Observe the version history to confirm that multiple versions of the object are being retained.
-
-## Step 4: Verify versioning behavior
-- To further verify versioning behavior, you can:
-  - Download different versions of the object from the version history.
-  - Restore previous versions of the object if needed.
-  - Compare different versions of the object to see the changes over time.
-# Task 5: Test Replication
-
-## Step 1: Upload an object to the S3 bucket
-- Log in to the AWS Management Console and navigate to the S3 service.
-- Select the source S3 bucket where replication is configured.
-- Click on the "Upload" button to upload an object (file) to the bucket.
-- Follow the prompts to select the file from your local system and upload it to the bucket.
-
-## Step 2: Verify that the object is replicated to the destination region
-- After uploading the object to the source S3 bucket, navigate to the destination S3 bucket in the destination region.
-- Look for the uploaded object in the destination bucket. It should have the same name and content as the object uploaded to the source bucket.
-- If replication is functioning correctly, you should see the object replicated in the destination bucket shortly after it's uploaded to the source bucket.
-
-## Step 3: Validate replication settings (if needed)
-- If the object is not replicated to the destination bucket, verify the replication configuration settings:
-  - Check if the replication rule is correctly configured to replicate objects from the source bucket to the destination bucket.
-  - Ensure that the IAM role used for replication has appropriate permissions to read from the source bucket and write to the destination bucket.
-  - Confirm that both the source and destination buckets are in the correct regions and accessible.
-
-## Step 4: Monitor replication status
-- Monitor the replication status in the AWS Management Console to ensure that replication is working as expected.
-- Check the replication metrics and logs for any errors or delays in replication.
-- If there are any issues, troubleshoot them based on the error messages and logs provided.
-
-## Step 5: Verify object integrity
-- After replication, verify the integrity of the replicated object in the destination bucket.
-- Download the replicated object and compare it with the original object uploaded to the source bucket to ensure that replication didn't introduce any errors or inconsistencies.
-
-Congratulations! You have successfully tested replication for objects in the S3 bucket. Replication ensures that objects are copied to a destination bucket in another region, providing redundancy and data durability.
+  ![screenshot of save](image/s3versioningversioning.png)
 
 
 
