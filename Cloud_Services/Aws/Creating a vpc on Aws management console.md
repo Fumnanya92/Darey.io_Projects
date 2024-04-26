@@ -8,13 +8,11 @@
 
 2. **Navigate to the VPC service:**
    - Once logged in, click on the "Services" dropdown menu in the top-left corner.
-   - Select "VPC" under the "Networking & Content Delivery" section. 
-
-3. **Click on "Your VPCs" in the left navigation pane:**
-   - In the left navigation pane, under "Virtual Private Cloud", click on "Your VPCs".
+   - Select "VPC".
 
 4. **Click the "Create VPC" button:**
    - On the "Your VPCs" page, click on the "Create VPC" button located at the top of the page.
+     ![screenshot of create VPC](image/vpccreate.png)
 
 5. **Fill in the details for your VPC:**
    - In the "Create VPC" wizard, you'll be prompted to fill in various details:
