@@ -42,5 +42,46 @@ In this mini project, you will configure an S3 bucket policy that allows access 
    Once the bucket is created, you'll see a confirmation message.
    You can now start uploading files to your new S3 bucket!
    ![screenshot of bucket created](image/cloudfronts3.png)
+   
+
+   ## Task 2: Create a CloudFront Distribution
+
+1. **Navigate to CloudFront Service:**
+   - Go to the CloudFront service.
+
+2. **Initiate Creation of Distribution:**
+   - On the CloudFront dashboard, locate and click the "Create Distribution" button.
+     ![screenshot of create distrubution](image/cloudfrontdistribution.png)
+   
+4. **Configure Distribution Settings:**
+   - **Origin Settings:**
+     - Choose your S3 bucket as the origin.
+     - `use website endpoint`
+     ![screenshot of create origin](image/cloudfrontorigin.png)
+
+   - **Default Cache Behavior Settings:**
+     - Adjust cache behaviors according to your requirements (e.g., cache duration, query string handling).
+   - **Distribution Settings:**
+     - Specify additional settings such as logging, SSL certificate, supported HTTP versions, etc.
+   
+5. **Optional Settings Configuration:**
+   - **Cache Behavior Settings:**
+     - Configure cache behaviors for specific paths or patterns, if needed.
+   - **Distribution Settings:**
+     - Adjust default settings such as price class, IPv6 support, and comment.
+   - **Additional Features:**
+     - Enable features like Lambda@Edge, field-level encryption, etc., as per your requirements.
+
+6. **Review and Create:**
+   - After configuring the settings, review your choices to ensure everything is set up correctly.
+   - Click the "Create Distribution" button to initiate the creation process.
+
+7. **Wait for Distribution Deployment:**
+   - CloudFront distributions typically take some time to deploy. Monitor the status in the CloudFront dashboard until it shows as deployed.
+
+8. **Verify Configuration:**
+   - Once deployed, verify the CloudFront distribution's settings and functionality by accessing the provided domain name or endpoint.
+
+
 
    
