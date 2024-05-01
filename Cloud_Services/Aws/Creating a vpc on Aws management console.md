@@ -16,9 +16,10 @@
 
 5. **Fill in the details for your VPC:**
    - In the "Create VPC" wizard, you'll be prompted to fill in various details:
-     - **Name tag:** Give your VPC a descriptive name.
-     - **IPv4 CIDR block:** Specify the IPv4 CIDR block for your VPC (e.g., 10.0.0.0/16).
-     - **IPv6 CIDR block (optional):** If you want to enable IPv6, you can specify an IPv6 CIDR block.
-     - **Tenancy:** Choose whether you want the instances launched in this VPC to run on shared hardware (default) or dedicated hardware.
+   - choose **vpc and more**
+   - **Name tag:** Give your VPC a descriptive name.
+   - **IPv4 CIDR block:** Specify the IPv4 CIDR block for your VPC (e.g., 10.0.0.0/16).
+   - **IPv6 CIDR block (optional):** If you want to enable IPv6, you can specify an IPv6 CIDR block.
+   - **Tenancy:** Choose whether you want the instances launched in this VPC to run on shared hardware (default) or dedicated hardware.
    - After filling in the details, click on the "Create" button to create your VPC.
-
+ ![screenshot of create VPC](image/vpc.png)
