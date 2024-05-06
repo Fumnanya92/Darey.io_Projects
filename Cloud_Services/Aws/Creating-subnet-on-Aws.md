@@ -23,7 +23,9 @@
 
 2. Click the "Create subnet" button.
 
-3. Specify the details for the private subnet, associating it with the same VPC as the public subnet.
+3. Specify the details for the private subnet, associating it with the same VPC as the public subnet
+ ![screenshot of create subnet](image/vpcprivate.png)  
+   
    
 #### Task 3: Verify Subnet Creation
 
