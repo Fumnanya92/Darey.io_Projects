@@ -14,6 +14,8 @@
 5. Click the "Create subnet" button.
 
 6. Specify the subnet details, including the VPC, availability zone, and IPv4 CIDR block.
+7. create "subnets"
+   ![screenshot of create subnet](image/vpcsubnetcreated.png)
 
 #### Task 2: Create Private Subnet
 
