@@ -6,7 +6,9 @@
 1. Log in to the AWS Management Console.
 
 2. Navigate to the VPC service.
-3. create a vpc without "subnets" 
+
+3. create a vpc without "subnets" ![link to creating a vpc](https://github.com/Fumnanya92/Darey.io_Projects/blob/main/Cloud_Services/Aws/Creating-a-vpc-on-Aws-management-console.md)
+
 4. Click on "Subnets" in the left navigation pane.
 
 5. Click the "Create subnet" button.
