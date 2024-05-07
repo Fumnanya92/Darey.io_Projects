@@ -6,6 +6,7 @@
 
    - In the AWS Management Console, search for "VPC" or find it under the "Networking & Content Delivery" section.
    - Click on the "VPC" service to open it.
+   - create a "VPC" for this project ![link to create vpc]()
 
 2. **Click on "Internet Gateways" in the left navigation pane**
 
