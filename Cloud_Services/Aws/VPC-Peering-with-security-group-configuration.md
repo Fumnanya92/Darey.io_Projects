@@ -3,9 +3,7 @@
 ## Task 1: Create Two VPCs
 
 1. **Navigate to the VPC service**
-   - In the AWS Management Console, search for "VPC" or find it under the "Networking & Content Delivery" section.
-
-3. **Click on "Your VPCs" in the left navigation pane**
+   - In the AWS Management Console, search for "VPC".
    - Once in the VPC dashboard, locate and click on "Your VPCs" in the left navigation pane.
 
 4. **Create VPC-A**
