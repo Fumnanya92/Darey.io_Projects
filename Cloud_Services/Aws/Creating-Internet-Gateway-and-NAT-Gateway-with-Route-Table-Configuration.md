@@ -6,16 +6,18 @@
 
    - In the AWS Management Console, search for "VPC" or find it under the "Networking & Content Delivery" section.
    - Click on the "VPC" service to open it.
-   - create a "VPC" for this project ![link to create vpc]()
+   - create a "VPC" for this project![link to create vpc](https://github.com/Fumnanya92/Darey.io_Projects/blob/main/Cloud_Services/Aws/Creating-a-vpc-on-Aws-management-console.md)
+
+2 **Create subnets for the "VPC"**
 
 2. **Click on "Internet Gateways" in the left navigation pane**
 
    - In the VPC dashboard, locate the "Internet Gateways" option in the left navigation pane.
-   - Click on "Internet Gateways" to view the list of internet gateways.
+   - Click on "Internet Gateways" to view the list of Internet gateways.
 
 4. **Click the "Create internet gateway" button**
    - give the "internet gateway" name
-   - In the "Internet Gateways" page, click on the "Create internet gateway" button located at the top of the page.
+   - In the "Internet Gateways" page, click on the "Create Internet Gateway" button located at the top of the page.
      ![screenshot of IGW created](image/IGWcreated.png)
 
 6. **Attach the newly created internet gateway to your VPC**
