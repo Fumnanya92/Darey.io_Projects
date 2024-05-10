@@ -125,21 +125,20 @@
 1. **Launch Instances in Each VPC**
    - Go to the EC2 dashboard.
    - Launch instances in both VPC-A and VPC-B.
-   - Make sure to choose appropriate subnets within each VPC during instance launch.
+   - Make sure to choose appropriate subnets within each VPC.
 
 2. **Configure Security Groups and Network ACLs**
    - Configure the security groups of the instances in VPC-A and VPC-B to allow traffic between them.
-     - In the security group settings of each VPC, add inbound and outbound rules to allow desired traffic (e.g., SSH, HTTP, etc.) from/to the IP addresses or security groups of instances in the peered VPC.
-   - Ensure that network ACLs (if any) associated with the subnets in each VPC also allow the necessary traffic between the instances in the peered VPCs.
-     - Adjust inbound and outbound rules in the network ACLs to permit traffic between the subnets of VPC-A and VPC-B.
+     - In the security group settings of each VPC, **select existing security group** *this is the security group created for this project*.
+     - click launch instances
 
 3. **Test Connectivity Between Instances**
    - Once the security groups and network ACLs are configured, test the connectivity between instances in VPC-A and VPC-B.
    - SSH into an instance in VPC-A from your local machine (using a terminal or SSH client) and ping or attempt to establish any other connection to an instance in VPC-B.
    - Similarly, SSH into an instance in VPC-B and try to establish a connection to an instance in VPC-A.
    - Verify that the connections are successful based on the configured security group rules.
+![screenshot of the vpc A ping Vpc B](image/peeringVPCAB.png)
 
-Congratulations! You have verified connectivity between instances in VPC-A and VPC-B based on the configured security group rules.
 
 
 
