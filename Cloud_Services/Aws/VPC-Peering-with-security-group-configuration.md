@@ -71,11 +71,6 @@
    - You can verify the successful establishment of the peering connection by checking the status in the Peering Connections section.
     ![screenshot of peering VPC-A and B](image/peeringactive.png)
 
-## Create internet gateway with routing table for the VPCs**
-[How to create internet gateway with routing tables](https://github.com/Fumnanya92/Darey.io_Projects/blob/main/Cloud_Services/Aws/Creating-Internet-Gateway-and-NAT-Gateway-with-Route-Table-Configuration.md)
-
-
-
 ## Task 4: Configure Security Groups
 
 1. **Navigate to the Security Groups section in the EC2 Dashboard**
@@ -85,7 +80,7 @@
 2. **Create a New Security Group for Instances in VPC-A**
    - In the Security Groups section, click the "Create Security Group" button.
    - Specify the details for the security group:
-     - **Security group name:** Enter a descriptive name for the security group.
+     - **Security group name:**.
      - **Description:** Optionally, provide a brief description of the security group.
      - **VPC:** Select VPC-A from the dropdown list.
    - Click "Create" to create the security group.
@@ -95,15 +90,14 @@
    - Configure inbound rules:
      - Click the "Inbound Rules" tab.
      - Click "Add Rule" and specify the following:
-       - **Type:** Select the type of traffic you want to allow (e.g., SSH, HTTP, HTTPS).
+       - **Type:** Select the `SSH port range 22`
        - **Source:** Define the source IP range or specific security group from which the traffic is allowed.
-     - Repeat the above steps to add any additional inbound rules as needed.
-   - Configure outbound rules:
+     
+     **Configure outbound rules:**
      - Click the "Outbound Rules" tab.
      - Click "Add Rule" and specify the following:
        - **Type:** Select the type of traffic you want to allow (e.g., All traffic, Custom TCP rule, Custom UDP rule).
        - **Destination:** Define the destination IP range or specific security group to which the traffic is allowed.
-     - Repeat the above steps to add any additional outbound rules as needed.
 
 4. **Associate the Security Group with Instances in VPC-A**
    - Once you have configured the inbound and outbound rules, go to the "Instances" section in the EC2 dashboard.
@@ -112,7 +106,7 @@
    - From the list of available security groups, select the newly created security group.
    - Click "Assign Security Groups" to associate the security group with the selected instances.
 
-## Task 4: Configure Security Groups (Continued)
+## Task 4: Configure Security Groups For VPC-B
 
 5. **Repeat the Process for Instances in VPC-B**
    - In the Security Groups section of the EC2 Dashboard, follow the same steps as before to create a new security group for instances in VPC-B.
@@ -123,10 +117,10 @@
    - From the list of available security groups, select the newly created security group for VPC-B.
    - Click "Assign Security Groups" to associate the security group with the selected instances in VPC-B.
 
-# Creating an internet gateway for the VCPs
-
-
-
+```
+ **Create internet gateway with routing table for the VPCs**
+[How to create internet gateway with routing tables](https://github.com/Fumnanya92/Darey.io_Projects/blob/main/Cloud_Services/Aws/Creating-Internet-Gateway-and-NAT-Gateway-with-Route-Table-Configuration.md)
+```
 ## Task 5: Verify Connectivity
 
 1. **Launch Instances in Each VPC**
