@@ -117,10 +117,9 @@
    - From the list of available security groups, select the newly created security group for VPC-B.
    - Click "Assign Security Groups" to associate the security group with the selected instances in VPC-B.
 
-```
- **Create internet gateway with routing table for the VPCs**
+ ### Create internet gateway with routing table for the VPCs
 [How to create internet gateway with routing tables](https://github.com/Fumnanya92/Darey.io_Projects/blob/main/Cloud_Services/Aws/Creating-Internet-Gateway-and-NAT-Gateway-with-Route-Table-Configuration.md)
-```
+
 ## Task 5: Verify Connectivity
 
 1. **Launch Instances in Each VPC**
