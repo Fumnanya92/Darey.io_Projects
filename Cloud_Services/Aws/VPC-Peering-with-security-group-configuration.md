@@ -25,6 +25,7 @@
     ![screenshot of created VPC-A and B](image/peeringAB.png)
 
 7. **Create public and private subnets each for VPC-A and VPC-B
+   ![how to create subnet](https://github.com/Fumnanya92/Darey.io_Projects/blob/main/Cloud_Services/Aws/Creating-subnet-on-Aws.md)
    
 
 
