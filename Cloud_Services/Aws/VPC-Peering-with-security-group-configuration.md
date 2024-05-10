@@ -118,6 +118,7 @@
    - From the list of available security groups, select the newly created security group for VPC-B.
    - Click "Assign Security Groups" to associate the security group with the selected instances in VPC-B.
 
+# Creating an internet gateway for the VCPs
 
 
 
