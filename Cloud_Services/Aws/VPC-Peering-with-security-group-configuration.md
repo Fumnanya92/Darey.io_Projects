@@ -24,6 +24,10 @@
    - After creating both VPCs, you should see them listed under "Your VPCs" in the VPC dashboard.
     ![screenshot of created VPC-A and B](image/peeringAB.png)
 
+7. **Create public and private subnets each for VPC-A and VPC-B
+   
+
+
 ## Task 2: Initiate VPC Peering Connection
 
 1. **Navigate to the Peering Connections section**
