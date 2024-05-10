@@ -71,7 +71,8 @@
    - You can verify the successful establishment of the peering connection by checking the status in the Peering Connections section.
     ![screenshot of peering VPC-A and B](image/peeringactive.png)
 
-**Create internet gateway with routing table for the VPCs**
+## Create internet gateway with routing table for the VPCs**
+[How to create internet gateway with routing tables](https://github.com/Fumnanya92/Darey.io_Projects/blob/main/Cloud_Services/Aws/Creating-Internet-Gateway-and-NAT-Gateway-with-Route-Table-Configuration.md)
 
 
 
