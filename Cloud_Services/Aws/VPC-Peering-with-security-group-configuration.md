@@ -71,6 +71,10 @@
    - You can verify the successful establishment of the peering connection by checking the status in the Peering Connections section.
     ![screenshot of peering VPC-A and B](image/peeringactive.png)
 
+**Create internet gateway with routing table for the VPCs**
+
+
+
 ## Task 4: Configure Security Groups
 
 1. **Navigate to the Security Groups section in the EC2 Dashboard**
