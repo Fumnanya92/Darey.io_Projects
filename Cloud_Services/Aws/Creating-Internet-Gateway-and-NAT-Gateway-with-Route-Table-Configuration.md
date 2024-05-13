@@ -6,11 +6,11 @@
 
    - In the AWS Management Console, search for "VPC" or find it under the "Networking & Content Delivery" section.
    - Click on the "VPC" service to open it.
-   - create a "VPC" for this project![link to create vpc](https://github.com/Fumnanya92/Darey.io_Projects/blob/main/Cloud_Services/Aws/Creating-a-vpc-on-Aws-management-console.md)
+   - create a "VPC" for this project[link to create vpc](https://github.com/Fumnanya92/Darey.io_Projects/blob/main/Cloud_Services/Aws/Creating-a-vpc-on-Aws-management-console.md)
 
 2 **Create subnets for the "VPC"**
    - create a public and private subnet for the "VPC"
-     ![link to creating subnet on Aws](https://github.com/Fumnanya92/Darey.io_Projects/blob/main/Cloud_Services/Aws/Creating-subnet-on-Aws.md)
+     [link to creating subnet on Aws](https://github.com/Fumnanya92/Darey.io_Projects/blob/main/Cloud_Services/Aws/Creating-subnet-on-Aws.md)
 
 3. **Click on "Internet Gateways" in the left navigation pane**
    - In the VPC dashboard, locate the "Internet Gateways" option in the left navigation pane.
