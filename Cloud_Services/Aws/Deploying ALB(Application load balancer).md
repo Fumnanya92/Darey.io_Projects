@@ -120,4 +120,23 @@
   - Review the configuration details to ensure everything is correct.
   - Click on the "Create" button to create the ALB.
 
+# Task 5: Test Load Balancing
+
+## Step 1: Obtain the DNS name of the ALB
+- Select your Application Load Balancer (ALB) from the list.
+- In the details section at the bottom, find the "DNS name" of the ALB. It will look something like `my-alb-1234567890.us-west-2.elb.amazonaws.com`.
+
+## Step 2: Open a Web Browser and Access the ALB DNS Name
+
+- Open a web browser on your computer.
+- In the address bar, enter the DNS name of the ALB obtained in Step 1 and press Enter.
+- You should see the web application served by one of your EC2 instances.
+
+## Step 3: Verify Traffic Distribution
+
+- Refresh the web browser multiple times and observe the responses.
+- If you have set up your EC2 instances with distinguishable content (e.g., different welcome messages or hostnames), you should see responses from both instances alternately.
+- Alternatively, you can check the access logs on both EC2 instances to verify that they are both receiving requests from the ALB.
+
+
 
