@@ -16,11 +16,11 @@
 
 ## Step 4: Create a New Launch Template
 - Click the "Create launch template" button located at the top of the Launch Templates page.
+![screenshot of launch template](image/Ascreatetemplate.png)
 
 ## Step 5: Configure the Launch Template Settings
 - **Template Name:** Enter a unique name for your launch template.
-- **Template Version Description (Optional):** Provide a description for this version of the template.
-- **Source Template:** Optionally, select an existing template to base this one on.
+- **Template Version Description:** Provide a description.
 - **Amazon Machine Image (AMI):** Choose an AMI from the list or enter the AMI ID.
 - **Instance Type:** Select the desired instance type (e.g., t2.micro).
 - **Key Pair:** Choose an existing key pair or create a new one for SSH access.
@@ -33,3 +33,4 @@
   - **Monitoring, Tenancy, etc.:** Configure additional settings as needed.
   
 - After configuring all necessary settings, click the "Create launch template" button at the bottom of the page to save your template.
+  
