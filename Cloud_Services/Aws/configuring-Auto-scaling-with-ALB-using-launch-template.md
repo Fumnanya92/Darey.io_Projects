@@ -95,16 +95,26 @@
   - Choose one or more subnets within the selected VPC for the instances.
 - **Load Balancing (Optional):** 
   - If you have a load balancer, choose whether to attach it to your Auto Scaling group.
-  - Select the appropriate target group or classic load balancer.
 - **Scaling Policies:**
   - Configure policies to define how your Auto Scaling group scales in and out.
-  - Set thresholds and actions based on CloudWatch alarms or custom metrics.
+  - Select **Target tracking scaling policy**
+  - Choose a CloudWatch metric and target value and let the scaling policy adjust the desired capacity in proportion to the metric's value.
 - **Instance Protection (Optional):** Enable instance protection to prevent specific instances from being terminated during a scale-in event.
 - **Health Checks:**
-  - Select whether to use EC2 or ELB health checks.
-  - Set the health check grace period.
+- **Add a notification (optional)**
+- Set the health check grace period.
 
 - After configuring all necessary settings, click the "Create Auto Scaling group" button at the bottom of the page to finalize the setup.
+
+# Task 5: Test Auto Scaling
+
+## Step 1: Generate Traffic to Trigger Scaling Policies
+- Connect to one of the instances in your Auto Scaling group using SSH.
+- Install the necessary tools to generate CPU stress.
+
+```bash
+sudo amazon-linux-extras install epel -y
+sudo yum install stress -y
 
 
 
