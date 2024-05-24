@@ -37,8 +37,9 @@
  Step 4: Create the AMI
 - With the instance selected, click on the "Actions" dropdown menu.
 - Choose "Image and templates" and then "Create Image."
+```
 ![screenshot of the step above](image/AScreateimage)
-
+```
  Step 5: Configure the AMI Settings
 - **Image Name:** Enter a unique name for your AMI.
 - **Image Description (Optional):** Provide a description for the AMI.
