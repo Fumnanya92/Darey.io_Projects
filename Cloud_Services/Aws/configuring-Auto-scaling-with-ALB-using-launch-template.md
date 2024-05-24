@@ -30,28 +30,32 @@
 - In the AWS Management Console, find the "Services" dropdown menu located at the top of the page.
 - Select "EC2" from the list of services.
 
- Step 3: Choose an Instance to Create the AMI From
+ Step 2: Choose an Instance to Create the AMI From
 - In the EC2 dashboard, click on "Instances" in the left navigation pane.
 - Select the instance you want to create an AMI from.
 
- Step 4: Create the AMI
+ Step 3: Create the AMI
 - With the instance selected, click on the "Actions" dropdown menu.
 - Choose "Image and templates" and then "Create Image."
 ```
-![screenshot of the step above](image/AScreateimage)
+![screenshot of the step above](image/AScreateimage.png)
 ```
- Step 5: Configure the AMI Settings
+ Step 4: Configure the AMI Settings
 - **Image Name:** Enter a unique name for your AMI.
 - **Image Description (Optional):** Provide a description for the AMI.
 - **No Reboot:** Decide whether to enable the "No Reboot" option. If unchecked, the instance will be stopped and rebooted to ensure a clean image.
 - **Instance Volumes:** Review and configure the root volume and any additional volumes to be included in the AMI.
 - Click the "Create Image" button to start the creation process.
 
- Step 6: Monitor the AMI Creation Process
+ Step 5: Monitor the AMI Creation Process
 - In the left navigation pane, click on "AMIs" under the "Images" section.
 - You can monitor the status of your AMI in the AMIs dashboard. Once the status changes to "available," your AMI is ready to use.
 ```
-  
+![screenshot of the step above](image/Asimagecreated.png)
+
+
+ ## Step 2: Navigate back to the Launch template
+ 
 - **Instance Type:** Select the desired instance type (e.g., t2.micro).
 - **Key Pair:** Choose an existing key pair or create a new one for SSH access.
 - **Network Settings:** Configure VPC, subnet, and other networking options.
@@ -61,7 +65,49 @@
   - **User Data:** Enter any user data scripts or cloud-init directives to run on instance launch.
   - **IAM Role:** Assign an IAM role if necessary.
   - **Monitoring, Tenancy, etc.:** Configure additional settings as needed.
-  
 - After configuring all necessary settings, click the "Create launch template" button at the bottom of the page to save your template.
+
+
+# Task 2: Set Up Auto Scaling Group
+
+## Step 1: Navigate to the EC2 Service
+- Log in to the [AWS Management Console](https://aws.amazon.com/console/).
+- In the top navigation bar, click on "Services" and select "EC2."
+
+## Step 2: Access Auto Scaling Groups
+- In the EC2 dashboard, look at the left navigation pane.
+- Click on "Auto Scaling Groups" under the "Auto Scaling" section.
+
+## Step 3: Create a New Auto Scaling Group
+- Click the "Create Auto Scaling group" button located at the top of the Auto Scaling Groups page.
+
+## Step 4: Choose a Launch Template
+- Select "Use Launch Template" option.
+- From the dropdown menu, choose the launch template you created previously.
+
+## Step 5: Configure Auto Scaling Group Settings
+- **Group Name:** Enter a unique name for your Auto Scaling group.
+- **Launch Template Version:** Select the appropriate version of the launch template if applicable.
+- **Desired Capacity:** Specify the initial number of instances you want running in this group.
+- **Minimum Capacity:** Set the minimum number of instances the group should maintain.
+- **Maximum Capacity:** Set the maximum number of instances the group can scale out to.
+
+## Step 6: Set Up Additional Configurations
+- **Network Settings:**
+  - Select the VPC where your instances will be launched.
+  - Choose one or more subnets within the selected VPC for the instances.
+- **Load Balancing (Optional):** 
+  - If you have a load balancer, choose whether to attach it to your Auto Scaling group.
+  - Select the appropriate target group or classic load balancer.
+- **Scaling Policies:**
+  - Configure policies to define how your Auto Scaling group scales in and out.
+  - Set thresholds and actions based on CloudWatch alarms or custom metrics.
+- **Instance Protection (Optional):** Enable instance protection to prevent specific instances from being terminated during a scale-in event.
+- **Health Checks:**
+  - Select whether to use EC2 or ELB health checks.
+  - Set the health check grace period.
+
+- After configuring all necessary settings, click the "Create Auto Scaling group" button at the bottom of the page to finalize the setup.
+
 
 
