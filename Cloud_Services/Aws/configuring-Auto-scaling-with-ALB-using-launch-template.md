@@ -54,7 +54,7 @@
 ![screenshot of the step above](image/Asimagecreated.png)
 
 
- ## Step 2: Navigate back to the Launch template
+ ## Step 6: Navigate back to the Launch template
  
 - **Instance Type:** Select the desired instance type (e.g., t2.micro).
 - **Key Pair:** Choose an existing key pair or create a new one for SSH access.
@@ -70,29 +70,26 @@
 
 # Task 2: Set Up Auto Scaling Group
 
-## Step 1: Navigate to the EC2 Service
-- Log in to the [AWS Management Console](https://aws.amazon.com/console/).
-- In the top navigation bar, click on "Services" and select "EC2."
-
-## Step 2: Access Auto Scaling Groups
+## Step 1: Navigate to Auto Scaling Groups
 - In the EC2 dashboard, look at the left navigation pane.
 - Click on "Auto Scaling Groups" under the "Auto Scaling" section.
 
-## Step 3: Create a New Auto Scaling Group
+## Step 2: Create a New Auto Scaling Group
 - Click the "Create Auto Scaling group" button located at the top of the Auto Scaling Groups page.
+![screenshot of create Auto scaling group](image/AscreateAutoscaling.png)
 
-## Step 4: Choose a Launch Template
-- Select "Use Launch Template" option.
+## Step 3: Choose a Launch Template
+- Select the "Use Launch Template" option.
 - From the dropdown menu, choose the launch template you created previously.
 
-## Step 5: Configure Auto Scaling Group Settings
+## Step 4: Configure Auto Scaling Group Settings
 - **Group Name:** Enter a unique name for your Auto Scaling group.
 - **Launch Template Version:** Select the appropriate version of the launch template if applicable.
 - **Desired Capacity:** Specify the initial number of instances you want running in this group.
 - **Minimum Capacity:** Set the minimum number of instances the group should maintain.
 - **Maximum Capacity:** Set the maximum number of instances the group can scale out to.
 
-## Step 6: Set Up Additional Configurations
+## Step 5: Set Up Additional Configurations
 - **Network Settings:**
   - Select the VPC where your instances will be launched.
   - Choose one or more subnets within the selected VPC for the instances.
