@@ -41,7 +41,7 @@
 # Task 2: Configure Security Group
 
 1. **In the RDS Dashboard, Click on the Created RDS Instance**
-   - Go to the [RDS dashboard](https://console.aws.amazon.com/rds/).
+   - Go to the [RDS dashboard](https://console.aws.amazon.com/rds/)
    - Click on the identifier of the RDS instance you just created to view its details.
 
 2. **In the 'Connectivity' Tab, Note the Security Group Associated with the RDS Instance**
