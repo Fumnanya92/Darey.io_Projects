@@ -85,3 +85,109 @@
 
 
 ![RDSmysq](https://github.com/Fumnanya92/Darey.io_Projects/assets/104866089/48697bb7-dd6d-4cc8-b09c-3aab98d931cb)
+
+
+# Task 4: Create and Query Database
+
+## Step-by-Step Instructions
+
+1. **In the MySQL Client, Create a Sample Database**
+   - Once connected to your RDS instance using MySQL Workbench (or any other MySQL client), you can create a new database by executing the following SQL command:
+
+     ```
+     CREATE DATABASE sampledb;
+     ```
+
+   - To execute this command:
+     - Open a new SQL tab in MySQL Workbench.
+     - Copy and paste the command into the query editor.
+     - Click the "Execute" button (or press `Ctrl+Enter`) to run the query.
+
+2. **Verify the Database Creation**
+   - To ensure that the database was created successfully, you can list all databases by executing:
+
+     ```
+     SHOW DATABASES;
+     ```
+
+   - This will display a list of all databases, and `sampledb` should be included in the list.
+
+# Task 4: Create and Query Database
+
+## Step-by-Step Instructions
+
+1. **In the MySQL Client, Create a Sample Database**
+   - Once connected to your RDS instance using MySQL Workbench (or any other MySQL client), create a new database by executing the following SQL command:
+
+     ```sql
+     CREATE DATABASE sampledb;
+     ```
+
+   - To execute this command:
+     - Open a new SQL tab in MySQL Workbench.
+     - Copy and paste the command into the query editor.
+     - Click the "Execute" button (or press `Ctrl+Enter`) to run the query.
+
+2. **Verify the Database Creation**
+   - To ensure that the database was created successfully, list all databases by executing:
+
+     ```sql
+     SHOW DATABASES;
+     ```
+
+   - This will display a list of all databases, and `sampledb` should be included in the list.
+
+3. **Use the Created Database**
+   - Switch to the newly created database by executing the following command:
+
+     ```sql
+     USE sampledb;
+     ```
+
+   - This sets the context to `sampledb` so that subsequent operations are performed within this database.
+
+4. **Create a Table**
+   - Create a table named `users` within the `sampledb` database by executing the following SQL command:
+
+     ```
+     CREATE TABLE users (
+         id INT PRIMARY KEY,
+         name VARCHAR(255)
+     );
+     ```
+
+   - To execute this command:
+     - Ensure you are still in the same SQL tab or open a new one if needed.
+     - Copy and paste the command into the query editor.
+     - Click the "Execute" button (or press `Ctrl+Enter`) to run the query.
+
+5. **Verify the Table Creation**
+   - To ensure that the table was created successfully, you can list all tables in the `sampledb` database by executing:
+
+     ```sql
+     SHOW TABLES;
+     ```
+
+   - This will display a list of all tables, and `users` should be included in the list.
+
+6. **Insert Data into the Table**
+   - Insert some sample data into the `users` table by executing the following SQL command:
+
+     ```
+     INSERT INTO users (id, name) VALUES (1, 'John'), (2, 'Alice');
+     ```
+
+   - To execute this command:
+     - Ensure you are in the same SQL tab or open a new one if needed.
+     - Copy and paste the command into the query editor.
+     - Click the "Execute" button (or press `Ctrl+Enter`) to run the query.
+
+7. **Verify the Data Insertion**
+   - To ensure that the data was inserted successfully, you can query the table by executing:
+
+     ```
+     SELECT * FROM users;
+     ```
+
+   - This will display the data in the `users` table, and you should see the rows with `id` values 1 and 2 and corresponding `name` values 'John' and 'Alice'.
+
