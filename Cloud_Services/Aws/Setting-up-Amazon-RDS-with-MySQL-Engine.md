@@ -41,7 +41,6 @@
 # Task 2: Configure Security Group
 
 1. **In the RDS Dashboard, Click on the Created RDS Instance**
-   - Go to the [RDS dashboard](https://console.aws.amazon.com/rds/)
    - Click on the identifier of the RDS instance you just created to view its details.
 
 2. **In the 'Connectivity' Tab, Note the Security Group Associated with the RDS Instance**
@@ -59,7 +58,30 @@
      - **Port Range**: 3306
      - **Source**: Custom (Enter the IP address range that you want to allow access, e.g., `0.0.0.0/0` for all IP addresses, though this is not recommended for production environments)
    - Click on the "Save rules" button to apply the changes.
+   - 
+# Task 3: Connect to RDS Instance
 
-## Summary
-By following these steps, you will successfully configure the security group associated with your RDS instance to allow MySQL traffic.
+1. **Use a MySQL Client (e.g., MySQL Workbench) to Connect to the RDS Instance**
 
+   - **Open MySQL Workbench**:
+     - Launch MySQL Workbench on your computer.
+
+   - **Create a New Connection**:
+     - Click on the `+` icon next to "MySQL Connections" to create a new connection.
+
+   - **Enter Connection Details**:
+     - **Connection Name**: Enter a name for your connection (e.g., "AWS RDS MySQL").
+     - **Hostname**: Enter the endpoint of your RDS instance. You can find this on the "Connectivity & security" tab of your RDS instance details page under "Endpoint & port".
+     - **Port**: The default MySQL port is `3306`. Ensure this matches the port of your RDS instance.
+     - **Username**: Enter the master username you specified when creating the RDS instance.
+     - **Password**: Click on the "Store in Vault..." button (or equivalent) to enter and save your password securely.
+
+   - **Test the Connection**:
+     - Click on the "Test Connection" button to ensure all details are correct and the connection can be established. If successful, you should see a "Successfully made the MySQL connection" message.
+
+   - **Save and Connect**:
+     - Click on "OK" to save the connection settings.
+     - Double-click on the connection you just created to connect to the RDS instance.
+
+
+![RDSmysq](https://github.com/Fumnanya92/Darey.io_Projects/assets/104866089/48697bb7-dd6d-4cc8-b09c-3aab98d931cb)
