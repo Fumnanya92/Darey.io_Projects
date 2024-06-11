@@ -18,7 +18,7 @@
    - Set the IPv4 CIDR block to `10.0.0.0/16`.
    - Select "Default" for Tenancy.
    - Click on "Create VPC".
-   In full context: [link to creating vpc](https://github.com/Fumnanya92/Darey.io_Projects/blob/main/Cloud_Services/Aws/Creating-a-vpc-on-Aws-management-console.md)
+     **In full context:** [link to creating vpc](https://github.com/Fumnanya92/Darey.io_Projects/blob/main/Cloud_Services/Aws/Creating-a-vpc-on-Aws-management-console.md)
 
 2. **Create Subnets:**
    - Go to the Subnets section in the VPC Dashboard.
@@ -86,81 +86,7 @@
    - Select `Private-Subnet`.
    - Click "Save associations".
 
-## Summary
-- **VPC**: `WordPress-VPC` (`10.0.0.0/16`)
-- **Subnets**:
-  - Public Subnet: `10.0.1.0/24`
-  - Private Subnet: `10.0.2.0/24`
-- **Route Tables**:
-  - Public Route Table with route to Internet Gateway
-  - Private Route Table with local route only
-- **Internet Gateway**: `WordPress-IGW` attached to the VPC
-
-# Step-by-Step Guide to Implement a Secure Network Architecture with Public and Private Subnets
-
-## Step 1: Set Up Public Subnet for Resources Accessible from the Internet
-
-1. **Create the Public Subnet:**
-   - Navigate to the VPC Dashboard in your AWS Management Console.
-   - Go to the Subnets section.
-   - Click on "Create Subnet".
-   - Name: `Public-Subnet`
-   - VPC: `Your-VPC`
-   - Availability Zone: Choose one (e.g., `us-west-2a`)
-   - IPv4 CIDR block: `10.0.1.0/24`
-   - Click on "Create subnet".
-
-2. **Create and Attach an Internet Gateway:**
-   - Go to the Internet Gateways section.
-   - Click on "Create Internet Gateway".
-   - Name: `My-Internet-Gateway`
-   - Click on "Create internet gateway".
-   - Select the newly created Internet Gateway and click "Actions" > "Attach to VPC".
-   - Choose `Your-VPC` and click "Attach".
-
-3. **Create and Configure a Route Table for the Public Subnet:**
-   - Go to the Route Tables section.
-   - Click on "Create Route Table".
-   - Name: `Public-Route-Table`
-   - VPC: `Your-VPC`
-   - Click on "Create route table".
-   - Select `Public-Route-Table`.
-   - Go to the Routes tab and click on "Edit routes".
-   - Click on "Add route".
-   - Destination: `0.0.0.0/0`
-   - Target: Select `Internet Gateway` and choose `My-Internet-Gateway`.
-   - Click "Save routes".
-   - Go to the Subnet Associations tab.
-   - Click on "Edit subnet associations".
-   - Select `Public-Subnet`.
-   - Click "Save associations".
-
-## Step 2: Create Private Subnet for Resources with No Direct Internet Access
-
-1. **Create the Private Subnet:**
-   - Go to the Subnets section.
-   - Click on "Create Subnet".
-   - Name: `Private-Subnet`
-   - VPC: `Your-VPC`
-   - Availability Zone: Choose one (e.g., `us-west-2a`)
-   - IPv4 CIDR block: `10.0.2.0/24`
-   - Click on "Create subnet".
-
-2. **Create and Configure a Route Table for the Private Subnet:**
-   - Go to the Route Tables section.
-   - Click on "Create Route Table".
-   - Name: `Private-Route-Table`
-   - VPC: `Your-VPC`
-   - Click on "Create route table".
-   - Select `Private-Route-Table`.
-   - Go to the Routes tab and click on "Edit routes".
-   - Add the default local route automatically provided (`10.0.0.0/16` -> `local`).
-   - Go to the Subnet Associations tab.
-   - Click on "Edit subnet associations".
-   - Select `Private-Subnet`.
-   - Click "Save associations".
-
-## Step 3: Configure a NAT Gateway for Private Subnet Internet Access
+## Step 4: Configure a NAT Gateway for Private Subnet Internet Access
 
 1. **Create an Elastic IP for the NAT Gateway:**
    - Navigate to the Elastic IPs section in the VPC Dashboard.
@@ -197,23 +123,16 @@
 
   # Step-by-Step Guide to Deploy a Managed MySQL Database Using Amazon RDS for WordPress Data Storage
 
-# create an instance 
-# Step-by-Step Guide to Launch an EC2 Instance
 
+# create an instance 
 ## Step 1: Navigate to the EC2 Dashboard
 
-1. **Log in to your AWS Management Console:**
-   - Open your web browser and go to the AWS Management Console.
-   - Sign in with your AWS account credentials.
-
-2. **Access EC2 Dashboard:**
+   **Access EC2 Dashboard:**
    - In the AWS Management Console, search for `EC2` in the services search bar.
    - Click on `EC2` to open the EC2 Dashboard.
 
 ## Step 2: Launch an Instance
-
-1. **Click "Launch Instance":**
-   - On the EC2 Dashboard, click the `Launch instance` button.
+1. - On the EC2 Dashboard, click the `Launch instance` button.
 
 2. **Choose an Amazon Machine Image (AMI):**
    - Select an AMI from the list. You can choose from Amazon Linux, Ubuntu, Windows, or other pre-configured images.
@@ -223,7 +142,13 @@
    - Select the instance type that suits your needs (e.g., `t2.micro` for free tier eligible).
    - Click `Next: Configure Instance Details`.
 
-4. **Configure Instance Details:**
+4. **Select a Key Pair:**
+   - Select an existing key pair or create a new key pair.
+   - If creating a new key pair, download the key pair file (`.pem`) and keep it secure. You will need it to access your instance.
+   - Check the acknowledgment box.
+   - Click `Launch Instances`.
+
+5. **Configure Instance Details:**
    - Configure the instance details as needed. For a basic setup, you can leave the default settings.
    - Key configurations include:
      - Number of instances: Typically `1`.
@@ -232,17 +157,10 @@
      - Auto-assign Public IP: Enable if you need direct internet access.
    - Click `Next: Add Storage`.
 
-5. **Add Storage:**
+6. **Add Storage:**
    - Configure the storage for your instance. The default storage settings should be sufficient for basic use.
-   - Click `Next: Add Tags`.
 
-6. **Add Tags:**
-   - Add tags to help identify and manage your instance. Example:
-     - Key: `Name`
-     - Value: `MyEC2Instance`
-   - Click `Next: Configure Security Group`.
-
-7. **Configure Security Group:**
+8. **Configure Security Group:**
    - Create a new security group or select an existing one.
    - Add rules to allow necessary traffic (e.g., SSH for Linux or RDP for Windows).
      - Example for SSH access:
@@ -250,17 +168,31 @@
        - Protocol: `TCP`
        - Port Range: `22`
        - Source: `0.0.0.0/0` (For public access, restrict IP range for security)
-   - Click `Review and Launch`.
 
-8. **Review and Launch:**
+       - Type: `HTTP`
+       - Protocol: `TCP`
+       - Port Range: `80`
+       - Source: `0.0.0.0/0
+
+       - Type: `HTTPS`
+       - Protocol: `TCP`
+       - Port Range: `443`
+       - Source: `0.0.0.0/0
+
+       - Type: `MYSQL/Aurora`
+       - Protocol: `TCP`
+       - Port Range: `3306`
+       - Source: `0.0.0.0/0
+      
+       - Type: `NFS`
+       - Protocol: `TCP`
+       - Port Range: `2049`
+       - Source: `0.0.0.0/0
+9. **Review and Launch:**
    - Review your instance configuration.
    - Click `Launch`.
 
-9. **Select a Key Pair:**
-   - Select an existing key pair or create a new key pair.
-   - If creating a new key pair, download the key pair file (`.pem`) and keep it secure. You will need it to access your instance.
-   - Check the acknowledgment box.
-   - Click `Launch Instances`.
+ 
 
 10. **View Instances:**
     - Click `View Instances` to see your newly launched instance.
@@ -283,15 +215,6 @@
      - Use Remote Desktop Connection.
      - Enter the Public DNS or IP address of your instance.
      - Log in with the username `Administrator` and the password retrieved from the EC2 console.
-
-## Summary
-
-You have successfully launched an EC2 instance on AWS and connected to it. Your instance is now ready for use, and you can configure it further as needed.
-
-- **Instance Type**: Based on your selection (e.g., `t2.micro`)
-- **AMI**: Based on your selection (e.g., Amazon Linux, Ubuntu)
-- **Security Group**: Configured to allow necessary access
-- **Key Pair**: Used to securely connect to your instance
 
 This setup ensures that your EC2 instance is launched and accessible for further configuration and use.
 ![image](https://github.com/Fumnanya92/Darey.io_Projects/assets/104866089/aaef8aa8-3559-4a24-8b5b-16f4cf8ff27e)
@@ -344,17 +267,6 @@ This setup ensures that your EC2 instance is launched and accessible for further
 3. **Wait for the Update to Complete:**
 
    - The `yum update -y` command will download and install the latest updates for all installed packages. This process may take a few minutes.
-
-## Summary
-
-You have successfully SSH'd into your EC2 instance, switched to the root user, and updated all installed packages using `yum`. 
-
-- **SSH Command**: `ssh -i /path/to/your-key-pair.pem ec2-user@your-public-dns`
-- **Switch to Root User**: `sudo su`
-- **Update Packages**: `yum update -y`
-
-This setup ensures that your EC2 instance is up-to-date with the latest package updates, which can include important security and performance improvements.
-
 
 
 ## Step 1: Create an Amazon RDS Instance with MySQL Engine
