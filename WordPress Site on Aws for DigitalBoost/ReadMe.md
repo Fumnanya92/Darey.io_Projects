@@ -1,11 +1,8 @@
-
-# Nonso Please find attached.
-
 # WordPress Site on AWS
 
 # 1. Create a VPC
 
-# Guide to Create a Virtual Private Cloud (VPC) for WordPress Infrastructure
+# Guide to Creating a Virtual Private Cloud (VPC) for WordPress Infrastructure
 
 ## Step 1: Define Address Range for the VPC
 
