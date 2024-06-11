@@ -295,12 +295,12 @@ This setup ensures that your EC2 instance is launched and accessible for further
    - Subnet group: Select a subnet group that includes subnets in different Availability Zones.
    - Public access: Set to `No` for enhanced security.
    - VPC security groups: Choose the same security group with the instance you created that allows access from your WordPress instances.
-     ```
-   - Example:
+     
+   **Example:**
    - Type: `MySQL/Aurora`.
    - Protocol: `TCP`.
    - Port range: `3306`.
-     ```
+   
    - Availability Zone: Choose `No preference` for high availability.
 
 6. **Database Options:**
@@ -309,30 +309,6 @@ This setup ensures that your EC2 instance is launched and accessible for further
 
 7. **Create Database:**
    - Review your settings and click "Create database".
-
-## Step 2: Configure Security Groups for RDS Instance
-
-1. **Create a Security Group for RDS:**
-   - Navigate to the VPC Dashboard.
-   - Click on "Security Groups".
-   - Click "Create security group".
-   - Name: `wordpress-rds-sg`.
-   - Description: `Security group for WordPress RDS instance`.
-   - VPC: Select the VPC where your RDS instance is running.
-   - Click "Create".
-
-2. **Add Inbound Rules:**
-   - Select `wordpress-rds-sg`.
-  
-   - Source: Select `Custom` and specify the security group used by your WordPress instances (e.g., `wordpress-sg`).
-   - Click "Save rules".
-
-3. **Associate Security Group with RDS Instance:**
-   - Go to the RDS Dashboard.
-   - Select your RDS instance (`wordpress-db`).
-   - Click on the "Modify" button.
-   - In the "Connectivity" section, under "VPC security groups", select `wordpress-rds-sg`.
-   - Click "Continue" and then "Apply immediately".
 
 # Step-by-Step Guide to Install MySQL 5.7 and Connect to an RDS Database
 
