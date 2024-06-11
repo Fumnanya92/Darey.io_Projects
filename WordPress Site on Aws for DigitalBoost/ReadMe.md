@@ -18,6 +18,7 @@
    - Set the IPv4 CIDR block to `10.0.0.0/16`.
    - Select "Default" for Tenancy.
    - Click on "Create VPC".
+   In full context: [link to creating vpc](https://github.com/Fumnanya92/Darey.io_Projects/blob/main/Cloud_Services/Aws/Creating-a-vpc-on-Aws-management-console.md)
 
 2. **Create Subnets:**
    - Go to the Subnets section in the VPC Dashboard.
