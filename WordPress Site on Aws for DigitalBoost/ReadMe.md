@@ -267,9 +267,80 @@ This setup ensures that your EC2 instance is launched and accessible for further
 
 3. **Wait for the Update to Complete:**
 
-   - The `yum update -y` command will download and install the latest updates for all installed packages. This process may take a few minutes.
+   - The `yum update -y` command will download and install the latest updates for all installed packages. This process may take a few minutes. 
 
-[See link for the rest of the command for this project]()
+[See link for the rest of the command for this project](https://github.com/Fumnanya92/Darey.io_Projects/blob/main/WordPress%20Site%20on%20Aws%20for%20DigitalBoost/Scripts.md)
+
+# Create an EFS File System
+
+1. **Navigate to EFS Dashboard on Aws:**
+
+2. **Create a New File System:**
+   - Click on "Create file system".
+   - Name the file system (e.g., `wordpress-efs`).
+
+3. **Configure File System Settings:**
+   - VPC: Choose the VPC where your WordPress instances are running.
+   - Availability and Durability: Select "Regional" for multi-AZ access.
+   - Performance mode: Choose "General Purpose".
+   - Throughput mode: Choose "Bursting" for typical use cases.
+   - Encryption: Enable encryption if required.
+
+4. **Configure Access Points:**
+   - Click "Next".
+   - Click "Add access point" if you need specific access point configurations, or proceed with the default settings.
+   
+5. **Review and Create:**
+   - Review all the settings.
+   - Click "Create".
+
+## Step 2: Install NFS Utilities
+
+1. **Install NFS Utilities:**
+
+   - Run the following command to install NFS utilities in your terminal:
+     ```bash
+     sudo yum install -y nfs-utils
+     ```
+
+## Step 3: Mount the Amazon EFS File System
+
+1. **Create a Mount Point (if necessary):**
+
+   - Ensure the directory `/var/www/html` exists. If it doesn't, create it:
+     ```bash
+     mkdir -p /var/www/html
+     ```
+
+2. **Mount the EFS File System:**
+
+   - Run the following command to mount the EFS file system. Replace `fs-0f9c428d759181662.efs.us-east-1.amazonaws.com` with your EFS file system DNS name:
+     ```bash
+     sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-0f9c428d759181662.efs.us-east-1.amazonaws.com:/ /var/www/html
+     ```
+
+3. **Install Apache and Related Packages:**
+
+   - Run the following command to install Apache HTTP Server, HTTPD tools, and SSL module:
+     ```bash
+     sudo yum install -y httpd httpd-tools mod_ssl
+     ```
+
+4. **Enable Apache to Start on Boot:**
+
+   - Run the following command to enable Apache to start on boot:
+     ```bash
+     sudo systemctl enable httpd
+     ```
+
+5. **Start the Apache Service:**
+
+   - Run the following command to start the Apache service:
+     ```bash
+     sudo systemctl start httpd
+     ```
+This setup ensures that your EC2 instance has Apache HTTP Server installed and running, ready to serve web content.
+
 
 ## Step 1: Create an Amazon RDS Instance with MySQL Engine
 
@@ -310,34 +381,12 @@ This setup ensures that your EC2 instance is launched and accessible for further
 7. **Create Database:**
    - Review your settings and click "Create database".
 
-# Step-by-Step Guide to Install MySQL 5.7 and Connect to an RDS Database
+## Install MySQL 5.7 and Connect to an RDS Database
+[See link for MySQL command for this project](https://github.com/Fumnanya92/Darey.io_Projects/blob/main/WordPress%20Site%20on%20Aws%20for%20DigitalBoost/Scripts.md)
 
 ## Step 1: SSH into the EC2 Instance
 
-1. **Open Terminal (Linux/Mac) or Command Prompt/PowerShell (Windows):**
-
-   - On your local machine, open the terminal or command prompt.
-
-2. **Navigate to the Directory with Your Key Pair File:**
-
-   - Change to the directory where your `.pem` key pair file is located. Example:
-     ```bash
-     cd /path/to/your-key-pair.pem
-     ```
-
-3. **SSH into the Instance:**
-
-   - Use the following command to SSH into your instance. Replace `/path/to/your-key-pair.pem` with the path to your `.pem` file and `your-public-dns` with the Public DNS name or IP address of your EC2 instance:
-     ```bash
-     ssh -i /path/to/your-key-pair.pem ec2-user@your-public-dns
-     ```
-
-   - Example:
-     ```bash
-     ssh -i /Users/username/keys/my-key-pair.pem ec2-user@ec2-54-123-45-67.compute-1.amazonaws.com
-     ```
-
-   - If this is your first time connecting to this instance, you may see a warning about the authenticity of the host. Type `yes` and press Enter to continue.
+1. **Open Terminal:**
 
 ## Step 2: Run `sudo su` and `yum update -y`
 
@@ -356,91 +405,28 @@ This setup ensures that your EC2 instance is launched and accessible for further
      ```
 
 ## Step 3: Install MySQL 5.7
-
-1. **Download and Install the MySQL 5.7 Repository:**
-
-   - Run the following command to download and install the MySQL 5.7 repository:
-     ```bash
-     sudo rpm -Uvh https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
-     ```
-
-2. **Import the MySQL GPG Key:**
-
-   - Run the following command to import the MySQL GPG key:
-     ```bash
-     sudo rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022
-     ```
-
-3. **Install MySQL Community Server:**
-
-   - Run the following command to install MySQL community server:
-     ```bash
-     sudo yum install mysql-community-server -y
-     ```
-
-4. **Install MySQL Server:**
-
-   - Run the following command to ensure MySQL server is installed:
-     ```bash
-     sudo yum install mysql-server -y
-     ```
-
-5. **Enable MySQL to Start on Boot:**
-
-   - Run the following command to enable MySQL to start on boot:
-     ```bash
-     sudo systemctl enable mysqld
-     ```
-
-6. **Start the MySQL Service:**
-
-   - Run the following command to start the MySQL service:
-     ```bash
-     sudo systemctl start mysqld
-     ```
+   - `sudo rpm -Uvh https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm`
+   - `sudo rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022`
+   - `sudo yum install mysql-community-server -y`
+   - `sudo yum install mysql-server -y`
+   - **Enable and Start MySQL**:
+   - `sudo systemctl enable mysqld`
+   - `sudo systemctl start mysqld`
 
 ## Step 4: Connect to the RDS MySQL Database
 
 1. **Connect to the RDS MySQL Database:**
 
    - Run the following command to connect to your RDS MySQL database. Replace `databaseforwordpress.cdyq80q08jtz.us-east-1.rds.amazonaws.com`, `admin`, and `password` with your RDS endpoint, username, and password:
-     ```bash
+     ```
      mysql -h databaseforwordpress.cdyq80q08jtz.us-east-1.rds.amazonaws.com -u admin -p
      ```
 
    - When prompted, enter the password for the `admin` user.
 
-## Summary
 
-You have successfully SSH'd into your EC2 instance, installed MySQL 5.7, and connected to your RDS MySQL database.
-
-- **SSH Command**: `ssh -i /path/to/your-key-pair.pem ec2-user@your-public-dns`
-- **Switch to Root User**: `sudo su`
-- **Update Packages**: `yum update -y`
-- **Install MySQL 5.7**:
-  - `sudo rpm -Uvh https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm`
-  - `sudo rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022`
-  - `sudo yum install mysql-community-server -y`
-  - `sudo yum install mysql-server -y`
-- **Enable and Start MySQL**:
-  - `sudo systemctl enable mysqld`
-  - `sudo systemctl start mysqld`
-- **Connect to RDS**:
-  - `mysql -h databaseforwordpress.cdyq80q08jtz.us-east-1.rds.amazonaws.com -u admin -p`
-
-This setup ensures that your EC2 instance has MySQL 5.7 installed and you can successfully connect to your RDS MySQL database.
-
-
-
-## Step 3: Connect WordPress to the RDS Database
-
-1. **Retrieve Database Endpoint:**
-   - Go to the RDS Dashboard.
-   - Select your RDS instance (`wordpress-db`).
-   - Copy the "Endpoint" (e.g., `wordpress-db.xxxxxxx.us-west-2.rds.amazonaws.com`).
-
-2. **Update WordPress Configuration:**
-   - SSH into your WordPress server.
+## Step 5: Connect WordPress to the RDS Database
+1. - SSH into your WordPress server.
    - Open the `wp-config.php` file located in your WordPress directory.
    - Update the database configuration settings as follows:
 
@@ -462,252 +448,6 @@ This setup ensures that your EC2 instance has MySQL 5.7 installed and you can su
 
    /** The Database Collate type. Don't change this if in doubt. */
    define('DB_COLLATE', '');
-
-
-   # Step-by-Step Guide to Utilize Amazon Elastic File System (EFS) for WordPress Files
-
-## Step 1: Create an EFS File System
-
-1. **Navigate to EFS Dashboard:**
-   - Log in to your AWS Management Console.
-   - Go to the EFS Dashboard.
-
-2. **Create a New File System:**
-   - Click on "Create file system".
-   - Name the file system (e.g., `wordpress-efs`).
-
-3. **Configure File System Settings:**
-   - VPC: Choose the VPC where your WordPress instances are running.
-   - Availability and Durability: Select "Regional" for multi-AZ access.
-   - Performance mode: Choose "General Purpose".
-   - Throughput mode: Choose "Bursting" for typical use cases.
-   - Encryption: Enable encryption if required.
-
-4. **Configure Access Points:**
-   - Click "Next".
-   - Click "Add access point" if you need specific access point configurations, or proceed with the default settings.
-   
-5. **Review and Create:**
-   - Review all the settings.
-   - Click "Create".
-  
-# Step-by-Step Guide to Install Apache HTTP Server on an EC2 Instance
-
-## Step 1: SSH into the EC2 Instance
-
-1. **Open Terminal (Linux/Mac) or Command Prompt/PowerShell (Windows):**
-
-   - On your local machine, open the terminal or command prompt.
-
-2. **Navigate to the Directory with Your Key Pair File:**
-
-   - Change to the directory where your `.pem` key pair file is located. Example:
-     ```bash
-     cd /path/to/your-key-pair.pem
-     ```
-
-3. **SSH into the Instance:**
-
-   - Use the following command to SSH into your instance. Replace `/path/to/your-key-pair.pem` with the path to your `.pem` file and `your-public-dns` with the Public DNS name or IP address of your EC2 instance:
-     ```bash
-     ssh -i /path/to/your-key-pair.pem ec2-user@your-public-dns
-     ```
-
-   - Example:
-     ```bash
-     ssh -i /Users/username/keys/my-key-pair.pem ec2-user@ec2-54-123-45-67.compute-1.amazonaws.com
-     ```
-
-   - If this is your first time connecting to this instance, you may see a warning about the authenticity of the host. Type `yes` and press Enter to continue.
-
-## Step 2: Run `sudo su` and `yum update -y`
-
-1. **Switch to the Root User:**
-
-   - Once connected, run the following command to switch to the root user:
-     ```bash
-     sudo su
-     ```
-
-2. **Update All Installed Packages:**
-
-   - Run the following command to update all installed packages:
-     ```bash
-     yum update -y
-     ```
-
-## Step 3: Install Apache HTTP Server
-
-1. **Install Apache and Related Packages:**
-
-   - Run the following command to install Apache HTTP Server, HTTPD tools, and SSL module:
-     ```bash
-     sudo yum install -y httpd httpd-tools mod_ssl
-     ```
-
-2. **Enable Apache to Start on Boot:**
-
-   - Run the following command to enable Apache to start on boot:
-     ```bash
-     sudo systemctl enable httpd
-     ```
-
-3. **Start the Apache Service:**
-
-   - Run the following command to start the Apache service:
-     ```bash
-     sudo systemctl start httpd
-     ```
-
-## Summary
-
-You have successfully SSH'd into your EC2 instance, switched to the root user, updated all installed packages, and installed Apache HTTP Server.
-
-- **SSH Command**: `ssh -i /path/to/your-key-pair.pem ec2-user@your-public-dns`
-- **Switch to Root User**: `sudo su`
-- **Update Packages**: `yum update -y`
-- **Install Apache**:
-  - `sudo yum install -y httpd httpd-tools mod_ssl`
-- **Enable and Start Apache**:
-  - `sudo systemctl enable httpd`
-  - `sudo systemctl start httpd`
-
-This setup ensures that your EC2 instance has Apache HTTP Server installed and running, ready to serve web content.
-
-# Step-by-Step Guide to Install NFS Utilities and Mount an Amazon EFS File System
-
-## Step 1: SSH into the EC2 Instance
-
-1. **Open Terminal (Linux/Mac) or Command Prompt/PowerShell (Windows):**
-
-   - On your local machine, open the terminal or command prompt.
-
-2. **Navigate to the Directory with Your Key Pair File:**
-
-   - Change to the directory where your `.pem` key pair file is located. Example:
-     ```bash
-     cd /path/to/your-key-pair.pem
-     ```
-
-3. **SSH into the Instance:**
-
-   - Use the following command to SSH into your instance. Replace `/path/to/your-key-pair.pem` with the path to your `.pem` file and `your-public-dns` with the Public DNS name or IP address of your EC2 instance:
-     ```bash
-     ssh -i /path/to/your-key-pair.pem ec2-user@your-public-dns
-     ```
-
-   - Example:
-     ```bash
-     ssh -i /Users/username/keys/my-key-pair.pem ec2-user@ec2-54-123-45-67.compute-1.amazonaws.com
-     ```
-
-   - If this is your first time connecting to this instance, you may see a warning about the authenticity of the host. Type `yes` and press Enter to continue.
-
-## Step 2: Run `sudo su` and `yum update -y`
-
-1. **Switch to the Root User:**
-
-   - Once connected, run the following command to switch to the root user:
-     ```bash
-     sudo su
-     ```
-
-2. **Update All Installed Packages:**
-
-   - Run the following command to update all installed packages:
-     ```bash
-     yum update -y
-     ```
-
-## Step 3: Install NFS Utilities
-
-1. **Install NFS Utilities:**
-
-   - Run the following command to install NFS utilities:
-     ```bash
-     sudo yum install -y nfs-utils
-     ```
-
-## Step 4: Mount the Amazon EFS File System
-
-1. **Create a Mount Point (if necessary):**
-
-   - Ensure the directory `/var/www/html` exists. If it doesn't, create it:
-     ```bash
-     mkdir -p /var/www/html
-     ```
-
-2. **Mount the EFS File System:**
-
-   - Run the following command to mount the EFS file system. Replace `fs-0f9c428d759181662.efs.us-east-1.amazonaws.com` with your EFS file system DNS name:
-     ```bash
-     sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-0f9c428d759181662.efs.us-east-1.amazonaws.com:/ /var/www/html
-     ```
-
-## Summary
-
-You have successfully SSH'd into your EC2 instance, installed NFS utilities, and mounted an Amazon EFS file system.
-
-- **SSH Command**: `ssh -i /path/to/your-key-pair.pem ec2-user@your-public-dns`
-- **Switch to Root User**: `sudo su`
-- **Update Packages**: `yum update -y`
-- **Install NFS Utilities**: `sudo yum install -y nfs-utils`
-- **Mount EFS File System**:
-  - `sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-0f9c428d759181662.efs.us-east-1.amazonaws.com:/ /var/www/html`
-
-This setup ensures that your EC2 instance has NFS utilities installed and the EFS file system mounted, allowing shared access to the file system.
-
-
-
-## Step 2: Mount the EFS File System on WordPress Instances
-
-1. **Install NFS Utilities:**
-   - SSH into each of your WordPress instances.
-   - Install the NFS client utilities.
-     - For Amazon Linux, CentOS, RHEL:
-       ```bash
-       sudo yum install -y nfs-utils
-       ```
-     - For Ubuntu, Debian:
-       ```bash
-       sudo apt-get update
-       sudo apt-get install -y nfs-common
-       ```
-
-2. **Create Mount Point:**
-   - Create a directory to mount the EFS file system:
-     ```bash
-     sudo mkdir -p /mnt/efs
-     ```
-
-3. **Mount the EFS File System:**
-   - Find the EFS DNS name from the EFS Dashboard (e.g., `fs-12345678.efs.us-west-2.amazonaws.com`).
-   - Mount the EFS file system:
-     ```bash
-     sudo mount -t nfs4 -o nfsvers=4.1 fs-12345678.efs.us-west-2.amazonaws.com:/ /mnt/efs
-     ```
-
-4. **Update `/etc/fstab` for Automatic Mounting:**
-   - Open `/etc/fstab` in an editor:
-     ```bash
-     sudo nano /etc/fstab
-     ```
-   - Add the following line to ensure the EFS mounts automatically after a reboot:
-     ```bash
-     fs-12345678.efs.us-west-2.amazonaws.com:/ /mnt/efs nfs4 defaults,_netdev 0 0
-     ```
-   - Save and close the file.
-
-## Step 3: Configure WordPress to Use the Shared File System
-
-1. **Move WordPress Files to EFS:**
-   - Move the `wp-content` directory to the EFS mount point:
-     ```bash
-     sudo mv /var/www/html/wp-content /mnt/efs/wp-content
-     ```
-   - Create a symbolic link in the original location:
-     ```bash
-     sudo ln -s /mnt/efs/wp-content /var/www/html/wp-content
      ```
 
 2. **Set Correct Permissions:**
@@ -728,17 +468,7 @@ This setup ensures that your EC2 instance has NFS utilities installed and the EF
        ```bash
        sudo systemctl restart nginx
        ```
-
-## Summary
-
-You have successfully configured Amazon Elastic File System (EFS) for storing WordPress files, allowing scalable and shared access across multiple WordPress instances.
-
-- **EFS File System**: `wordpress-efs`
-- **Mount Point on Instances**: `/mnt/efs`
-- **WordPress Directory Moved**: `wp-content` moved to `/mnt/efs/wp-content` and symlinked back
-- **Permissions**: Set for web server access
-
-This setup ensures that your WordPress instances can share the same file system, providing scalability and consistency across multiple instances.
-
+## Add an Application load balancer
+[see how to lunch an ALB]()
 
 
