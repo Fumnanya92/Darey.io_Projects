@@ -469,6 +469,6 @@ This setup ensures that your EC2 instance has Apache HTTP Server installed and r
        sudo systemctl restart nginx
        ```
 ## Add an Application load balancer
-[see how to lunch an ALB]()
+[see how to lunch an ALB](https://github.com/Fumnanya92/Darey.io_Projects/blob/main/Cloud_Services/Aws/Deploying%20ALB(Application%20load%20balancer).md)
 
 
