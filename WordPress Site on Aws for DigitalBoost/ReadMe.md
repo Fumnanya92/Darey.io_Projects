@@ -274,8 +274,6 @@ This setup ensures that your EC2 instance is launched and accessible for further
 ## Step 1: Create an Amazon RDS Instance with MySQL Engine
 
 1. **Navigate to RDS Dashboard:**
-   - Log in to your AWS Management Console.
-   - Go to the RDS Dashboard.
 
 2. **Create a New Database:**
    - Click on "Create database".
@@ -296,7 +294,13 @@ This setup ensures that your EC2 instance is launched and accessible for further
    - VPC: Choose the VPC where your WordPress application is running.
    - Subnet group: Select a subnet group that includes subnets in different Availability Zones.
    - Public access: Set to `No` for enhanced security.
-   - VPC security groups: Choose or create a security group that allows access from your WordPress instances.
+   - VPC security groups: Choose the same security group with the instance you created that allows access from your WordPress instances.
+     ```
+   - Example:
+   - Type: `MySQL/Aurora`.
+   - Protocol: `TCP`.
+   - Port range: `3306`.
+     ```
    - Availability Zone: Choose `No preference` for high availability.
 
 6. **Database Options:**
@@ -319,11 +323,7 @@ This setup ensures that your EC2 instance is launched and accessible for further
 
 2. **Add Inbound Rules:**
    - Select `wordpress-rds-sg`.
-   - Go to the "Inbound rules" tab and click "Edit inbound rules".
-   - Click "Add rule".
-   - Type: `MySQL/Aurora`.
-   - Protocol: `TCP`.
-   - Port range: `3306`.
+  
    - Source: Select `Custom` and specify the security group used by your WordPress instances (e.g., `wordpress-sg`).
    - Click "Save rules".
 
