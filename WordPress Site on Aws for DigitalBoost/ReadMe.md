@@ -188,6 +188,7 @@
        - Protocol: `TCP`
        - Port Range: `2049`
        - Source: `0.0.0.0/0
+         
 9. **Review and Launch:**
    - Review your instance configuration.
    - Click `Launch`.
@@ -268,6 +269,7 @@ This setup ensures that your EC2 instance is launched and accessible for further
 
    - The `yum update -y` command will download and install the latest updates for all installed packages. This process may take a few minutes.
 
+[See link for the rest of the command for this project]()
 
 ## Step 1: Create an Amazon RDS Instance with MySQL Engine
 
