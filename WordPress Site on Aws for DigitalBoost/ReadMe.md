@@ -477,7 +477,7 @@ This setup ensures that your EC2 instance has Apache HTTP Server installed and r
 3. intigrate load balancer with Auto Scaling group
 
 ## Autoscaling group
-
+[link to create Atutoscaling group](https://github.com/Fumnanya92/Darey.io_Projects/blob/main/Cloud_Services/Aws/configuring-Auto-scaling-with-ALB-using-launch-template.md)
 **Steps**
 1. Create Autoscaling Group
 2. Define scaling policies based on matric like the CPU utilization
