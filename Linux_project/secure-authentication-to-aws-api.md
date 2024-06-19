@@ -45,8 +45,8 @@ Design an IAM policy granting full access to both EC2 and S3 services. This poli
 5. Click **Next: Tags**, optionally add tags, then click **Next: Review**.
 6. Enter a **Name** for the policy (e.g., `EC2_S3_FullAccess`).
 7. Click **Create policy**.
-![screenshot of the policy created](![image](https://github.com/Fumnanya92/Darey.io_Projects/assets/104866089/436fb667-cb49-4e76-ac86-65d3c517c3c3)
-)
+![screenshot of the policy created](https://github.com/Fumnanya92/Darey.io_Projects/assets/104866089/436fb667-cb49-4e76-ac86-65d3c517c3c3)
+
 
 ### 3. Create an IAM User
 
