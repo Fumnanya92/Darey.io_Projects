@@ -91,3 +91,91 @@ Generate programmatic access credentials - specifically, an access key ID and a 
 
 With these steps completed, you now have a securely authenticated setup for interacting with AWS services through your script.
 
+# Installing and Configuring the AWS CLI
+
+After setting up your AWS account and creating the necessary IAM user and permissions, the next step involves installing the AWS Command Line Interface (CLI). The AWS CLI is a powerful tool that allows you to interact with AWS services directly from your terminal, enabling automation and simplification of AWS resource management.
+
+## Step 1: Download AWS CLI
+
+1. **Spin up an Ec2 instance**:
+    - Launch an Ec2 instance and SSH into it. for this project I will be using Amozon Linux
+
+2. **Download the AWS CLI installer**:
+    - Use the `curl` command to download the AWS CLI installer. Run the following command in the terminal:
+   **For Linux**
+    ```sh
+    curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+    ```
+   **For Windows**   
+    ```sh
+    curl "https://awscli.amazonaws.com/AWSCLIV2.msi" -o "AWSCLIV2.msi"
+    ```
+
+## Step 2: Install AWS CLI 
+   **Linux**
+    - Unzip awscliv2.zip and run the installer
+    ```sh
+    unzip awscliv2.zip
+    sudo ./aws/install
+    ```
+    **Windows**
+2. **Run the installer**:
+   Use:
+   ```
+   msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi
+   ```
+   Or
+   **Open Windows Explorer**:
+    - Navigate to the directory where you downloaded `AWSCLIV2.msi`.
+    - Double-click the `AWSCLIV2.msi` file to start the installation process.
+    - Follow the on-screen instructions to complete the installation.
+
+## Step 3: Verify the Installation
+
+1. **Check AWS CLI version**:
+    - Confirm that the AWS CLI is installed correctly by checking its version. Run:
+    ```sh
+    aws --version
+    ```
+    - You should see output indicating the version of the AWS CLI installed, such as `aws-cli/2.x.x`.
+
+## Step 4: Configure AWS CLI
+
+1. **Run the configuration command**:
+    - Configure the AWS CLI with your credentials and default region. Execute:
+    ```sh
+    aws configure
+    ```
+
+2. **Enter your credentials**:
+    - You will be prompted to enter the following information:
+        - **AWS Access Key ID**: Enter the access key ID from the credentials you generated for your IAM user.
+        - **AWS Secret Access Key**: Enter the secret access key from the credentials you generated for your IAM user.
+        - **Default region name**: Enter the desired default region (e.g., `us-west-2`).
+        - **Default output format**: Enter the desired output format (e.g., `json`).
+
+    Example configuration interaction:
+    ```
+    AWS Access Key ID [None]: YOUR_ACCESS_KEY_ID
+    AWS Secret Access Key [None]: YOUR_SECRET_ACCESS_KEY
+    Default region name [None]: us-west-2
+    Default output format [None]: json
+    ```
+    ![image](https://github.com/Fumnanya92/Darey.io_Projects/assets/104866089/5e74a914-82a6-4243-bb3f-46d005c8e663)
+
+
+## Step 5: Test the Configuration
+
+1. **Run a simple AWS CLI command**:
+    - To verify that the configuration is correct and the AWS CLI can communicate with your AWS service, run a simple command, such as listing your S3 buckets:
+    ```sh
+    aws s3 ls
+    ```
+    - Or try running a basic command to list all the AWS regions:
+      ```
+      aws ec2 describe-regions --output table
+      ```
+    - If your configuration is correct, you should see a list of your S3 buckets (if any exist) or the list of the regions
+![image](https://github.com/Fumnanya92/Darey.io_Projects/assets/104866089/eafcd63a-49c4-4a0d-9d8c-c774f7cdf6de)
+
+
