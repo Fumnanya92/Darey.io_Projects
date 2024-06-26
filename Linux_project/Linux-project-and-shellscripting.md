@@ -1,1 +1,1 @@
-# Linux project and shellscripting
+# SHELL SCRIPTING FOR AWS MANAGEMENT
