@@ -211,6 +211,8 @@ In this capstone project, you will extend your shell scripting capabilities by c
         done
     }
     ```
+    ![image](https://github.com/Fumnanya92/Darey.io_Projects/assets/104866089/0134cbd8-1d7c-4236-9c93-de428358bbcc)
+
 
 4. **Create IAM Group:**
     - Define a function to create an IAM group named "admin" using the AWS CLI.
@@ -225,6 +227,8 @@ In this capstone project, you will extend your shell scripting capabilities by c
         fi
     }
     ```
+    ![image](https://github.com/Fumnanya92/Darey.io_Projects/assets/104866089/699b86ad-6c37-49e2-be25-24f76924b145)
+
 
 5. **Attach Administrative Policy to Group:**
     - Attach an AWS-managed administrative policy (e.g., "AdministratorAccess") to the "admin" group to grant administrative privileges.
@@ -239,6 +243,9 @@ In this capstone project, you will extend your shell scripting capabilities by c
         fi
     }
     ```
+
+    ![Uploading image.png…]()
+
 
 6. **Assign Users to Group:**
     - Iterate through the array of IAM user names and assign each user to the "admin" group using AWS CLI commands.
