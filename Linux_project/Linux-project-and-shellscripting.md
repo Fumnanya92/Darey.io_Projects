@@ -278,3 +278,11 @@ In this capstone project, you will extend your shell scripting capabilities by c
 4. **Configuration Details:**
     - Document configurations made during the infrastructure setup.
     - Explain the
+    - 
+
+    ![image](https://github.com/Fumnanya92/Darey.io_Projects/assets/104866089/728040e9-cfaf-404c-971c-ea9ac11c8516)
+
+   ![image](https://github.com/Fumnanya92/Darey.io_Projects/assets/104866089/61424904-f782-44e2-8c4b-db9979b716bd)
+   ![image](https://github.com/Fumnanya92/Darey.io_Projects/assets/104866089/1e17e4aa-0c6c-469b-b177-bfa613c8d4e8)
+
+
