@@ -12,21 +12,14 @@ In this capstone project, you will extend your shell scripting capabilities by c
 
 ## Evaluation Criteria
 
-### 1. Script Enhancement (30 points)
-
-#### 1.1. CentOS Support (15 points)
-
-- Successful extension of the provided script to include support for CentOS.
-- Proper modification of functions and conditional statements for CentOS compatibility.
-
-#### 1.2. Script Modularity (15 points)
+#### 1. Script Modularity
 
 - Clear organization of the script with modular functions for package installation, service management, and artifact deployment.
 - Effective use of functions for different Linux distributions.
 
-### 2. Infrastructure Setup (30 points)
+### 2. Infrastructure Setup 
 
-#### 2.1. EC2 Instance Launch (15 points)
+#### 2.1. EC2 Instance Launch 
 
 - Proper launch of EC2 instances with Amazon Linux, Ubuntu, and CentOS.
 - Configuration of instance attributes such as instance type, security groups, and key pairs.
@@ -244,7 +237,6 @@ In this capstone project, you will extend your shell scripting capabilities by c
     }
     ```
 
-    ![Uploading image.png…]()
 
 
 6. **Assign Users to Group:**
@@ -269,8 +261,6 @@ In this capstone project, you will extend your shell scripting capabilities by c
 2. Link to the script used for remote execution.
 
 ## Remote Deployment Process
-
-### Step-by-Step Instructions
 
 1. **Script Enhancement:**
     - Enhance the provided script to include IAM management.
