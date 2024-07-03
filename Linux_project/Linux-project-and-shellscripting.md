@@ -190,6 +190,7 @@ In this capstone project, you will extend your shell scripting capabilities by c
 
 1. Comprehensive documentation detailing your entire thought process in developing the script.
 2. Link to the script used for remote execution.
+[link to the complete script](https://github.com/Fumnanya92/Darey.io_Projects/blob/main/Linux_project/project_script/linux_administration_and_shell_script_script.md)
 
 ## Remote Deployment Process
 
