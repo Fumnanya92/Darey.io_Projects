@@ -151,6 +151,7 @@ create_s3_buckets() {
 }
 
 
+# Function for Argument
 check_num_of_args
 activate_infra_environment
 check_aws_cli
