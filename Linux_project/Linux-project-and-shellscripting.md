@@ -10,75 +10,6 @@ Datawise Solutions requires efficient management of AWS Identity and Access Mana
 ## Purpose
 In this capstone project, you will extend your shell scripting capabilities by creating more functions that extend the `aws_cloud_manager.sh` script.
 
-## Evaluation Criteria
-
-#### 1. Script Modularity
-
-- Clear organization of the script with modular functions for package installation, service management, and artifact deployment.
-- Effective use of functions for different Linux distributions.
-
-### 2. Infrastructure Setup 
-
-#### 2.1. EC2 Instance Launch 
-
-- Proper launch of EC2 instances with Amazon Linux, Ubuntu, and CentOS.
-- Configuration of instance attributes such as instance type, security groups, and key pairs.
-
-#### 2.2. Security Measures (15 points)
-
-- Appropriate configuration of security groups to ensure optimal security measures.
-- Proper setup of key pairs for secure remote access.
-
-### 3. Remote Execution and Deployment (30 points)
-
-#### 3.1. Script Upload (10 points)
-
-- Successful upload of the enhanced script to a centralized server.
-- Secure handling of the script to prevent unauthorized access.
-
-#### 3.2. Remote Execution (10 points)
-
-- Proper execution of the script on each instance remotely.
-- Handling of dependencies and adjustments for different distributions.
-
-#### 3.3. Apache Deployment (5 points)
-
-- Successful deployment of the Apache web server on each instance.
-- Verification of the Apache service status.
-
-#### 3.4. Sample Web Application Deployment (5 points)
-
-- Successful deployment of a sample web application on each instance.
-- Verification of web application accessibility.
-
-### 4. Documentation (20 points)
-
-#### 4.1. Remote Deployment Process (7 points)
-
-- Comprehensive documentation detailing the entire remote deployment process.
-- Clear step-by-step instructions for each task, including script enhancement, infrastructure setup, and remote execution.
-
-#### 4.2. Configuration Details (5 points)
-
-- Detailed documentation of configurations made during infrastructure setup.
-- Explanation of security measures implemented.
-
-#### 4.3. Challenges and Solutions (5 points)
-
-- Identification and documentation of challenges encountered during the project.
-- Clear presentation of solutions implemented to overcome challenges.
-
-#### 4.4. Key Findings and Insights (3 points)
-
-- A brief report summarizing key findings and insights gained from the project.
-- Reflection on the significance of deploying across multiple Linux distributions for system reliability.
-
-### 5. Script Link Submission (20 points)
-
-#### 5.1. Link Submission (20 points)
-
-- Submission of a link to the script used for remote execution.
-- Verification that the link provides access to the enhanced script with CentOS support.
 
 ## Objectives
 
@@ -273,13 +204,6 @@ In this capstone project, you will extend your shell scripting capabilities by c
 3. **Remote Execution and Deployment:**
     - Upload the enhanced script to a centralized server.
     - Execute the script remotely on each instance.
-    - Deploy the Apache web server and a sample web application.
-
-4. **Configuration Details:**
-    - Document configurations made during the infrastructure setup.
-    - Explain the
-    - 
-
     ![image](https://github.com/Fumnanya92/Darey.io_Projects/assets/104866089/728040e9-cfaf-404c-971c-ea9ac11c8516)
 
    ![image](https://github.com/Fumnanya92/Darey.io_Projects/assets/104866089/61424904-f782-44e2-8c4b-db9979b716bd)
