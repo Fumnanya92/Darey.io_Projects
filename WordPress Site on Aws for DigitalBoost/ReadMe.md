@@ -269,7 +269,7 @@ This setup ensures that your EC2 instance is launched and accessible for further
 
    - The `yum update -y` command will download and install the latest updates for all installed packages. This process may take a few minutes. 
 
-[See link for the rest of the command for this project](https://github.com/Fumnanya92/Darey.io_Projects/blob/main/WordPress%20Site%20on%20Aws%20for%20DigitalBoost/Scripts.md)
+![See link for the rest of the command for this project](https://github.com/Fumnanya92/Darey.io_Projects/blob/main/WordPress%20Site%20on%20Aws%20for%20DigitalBoost/Scripts.md)
 
 # Create an EFS File System
 
@@ -382,7 +382,7 @@ This setup ensures that your EC2 instance has Apache HTTP Server installed and r
    - Review your settings and click "Create database".
 
 ## Install MySQL 5.7 and Connect to an RDS Database
-[See link for MySQL command for this project](https://github.com/Fumnanya92/Darey.io_Projects/blob/main/WordPress%20Site%20on%20Aws%20for%20DigitalBoost/Scripts.md)
+![See link for MySQL command for this project](https://github.com/Fumnanya92/Darey.io_Projects/blob/main/WordPress%20Site%20on%20Aws%20for%20DigitalBoost/Scripts.md)
 
 ## Step 1: SSH into the EC2 Instance
 
@@ -469,7 +469,7 @@ This setup ensures that your EC2 instance has Apache HTTP Server installed and r
        sudo systemctl restart nginx
        ```
 ## Add an Application load balancer
-[see how to lunch an ALB](https://github.com/Fumnanya92/Darey.io_Projects/blob/main/Cloud_Services/Aws/Deploying%20ALB(Application%20load%20balancer).md)
+![see how to lunch an ALB](https://github.com/Fumnanya92/Darey.io_Projects/blob/main/Cloud_Services/Aws/Deploying%20ALB(Application%20load%20balancer).md)
 
 **Steps:**
 1. Create an application load balancer
@@ -477,7 +477,7 @@ This setup ensures that your EC2 instance has Apache HTTP Server installed and r
 3. intigrate load balancer with Auto Scaling group
 
 ## Autoscaling group
-[link to create Atutoscaling group](https://github.com/Fumnanya92/Darey.io_Projects/blob/main/Cloud_Services/Aws/configuring-Auto-scaling-with-ALB-using-launch-template.md)
+![link to create Atutoscaling group](https://github.com/Fumnanya92/Darey.io_Projects/blob/main/Cloud_Services/Aws/configuring-Auto-scaling-with-ALB-using-launch-template.md)
 **Steps**
 1. Create Autoscaling Group
 2. Define scaling policies based on matric like the CPU utilization
