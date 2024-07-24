@@ -469,15 +469,15 @@ This setup ensures that your EC2 instance has Apache HTTP Server installed and r
        sudo systemctl restart nginx
        ```
 ## Add an Application load balancer
-![see how to lunch an ALB](https://github.com/Fumnanya92/Darey.io_Projects/blob/main/Cloud_Services/Aws/Deploying%20ALB(Application%20load%20balancer).md)
+[see how to lunch an ALB](https://github.com/Fumnanya92/Darey.io_Projects/blob/main/Cloud_Services/Aws/Deploying%20ALB(Application%20load%20balancer).md)
 
 **Steps:**
 1. Create an application load balancer
 2. Configure listener rules for routing traffic to instance
-3. intigrate load balancer with Auto Scaling group
+3. integrate load balancer with Auto Scaling group
 
 ## Autoscaling group
-![link to create Atutoscaling group](https://github.com/Fumnanya92/Darey.io_Projects/blob/main/Cloud_Services/Aws/configuring-Auto-scaling-with-ALB-using-launch-template.md)
+[link to create Autoscaling group](https://github.com/Fumnanya92/Darey.io_Projects/blob/main/Cloud_Services/Aws/configuring-Auto-scaling-with-ALB-using-launch-template.md)
 **Steps**
 1. Create Autoscaling Group
 2. Define scaling policies based on matric like the CPU utilization
